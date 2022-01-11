@@ -1,0 +1,18 @@
+.button {
+   padding: .5rem 1rem;
+   border-radius: .4rem;
+   font-size: $font-normal-a;
+   outline: none;
+   border: none
+}
+
+.button__default {
+   background: $color-secondary;
+   color: $color-main;
+   cursor: pointer;
+   transition: .2s;
+
+   &:active {
+      transform: scale(.95);
+   }
+}

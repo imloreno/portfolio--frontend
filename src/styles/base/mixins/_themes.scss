@@ -1,0 +1,17 @@
+//-------------------------
+// THEME 1
+//-------------------------
+@mixin theme1 {
+   --color-main: #f8f8f8;
+   --color-secondary: #000000;
+   --color-extra-a: #ff9b21;
+   --color-extra-b: #ffe7ca;
+   --color-extra-c: #b9bff8;
+}
+
+//-------------------------
+// FONT SIZE
+//-------------------------
+$font-title: 2rem;
+$font-normal: 1rem;
+$font-small: .9rem;
