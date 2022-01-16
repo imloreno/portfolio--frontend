@@ -1,0 +1,13 @@
+.section {
+   display: grid;
+   grid-template-rows: auto 1fr;
+   padding: 1rem;
+
+   .section__header {
+      margin-bottom: .5rem;
+
+      .section__title {
+         font-size: $font-subtitle-a;
+      }
+   }
+}

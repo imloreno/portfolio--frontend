@@ -5,9 +5,11 @@ import "styles/main.scss";
 
 const App: React.FC = () => {
   return (
-    <Provider store={STORE}>
-      <Routes />
-    </Provider>
+    <>
+      <Provider store={STORE}>
+        <Routes />
+      </Provider>
+    </>
   );
 };
 

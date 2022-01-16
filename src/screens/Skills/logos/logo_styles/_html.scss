@@ -1,0 +1,41 @@
+.skills__logo--html {
+   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+   stroke-dashoffset: 100;
+   stroke-dasharray: 471;
+   stroke: $color-html;
+   height: 100%;
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--html {
+      filter: drop-shadow(0 0 .1rem $color-html-active);
+      animation: htmlStart 1s, htmlStroke .6s infinite alternate ease-in;
+      stroke: $color-html-active;
+
+   }
+}
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+@keyframes htmlStroke {
+   from {
+      filter: drop-shadow(0 0 .1rem $color-html-active);
+   }
+
+   to {
+      filter: drop-shadow(0 0 .5rem $color-html-active);
+   }
+}
+
+@keyframes htmlStart {
+   from {
+      stroke-dashoffset: 496;
+      stroke-dasharray: 471;
+   }
+
+   to {
+      stroke-dashoffset: 100;
+   }
+}

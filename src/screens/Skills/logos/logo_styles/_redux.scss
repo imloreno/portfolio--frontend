@@ -1,0 +1,39 @@
+.skills__logo--redux {
+   stroke: $color-redux;
+   stroke-dasharray: 79;
+   stroke-dashoffset: 290;
+   width: 100%;
+   transition: .5s;
+   height: 100%;
+   z-index: 2;
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--redux {
+      stroke: $color-redux-active;
+      filter: drop-shadow(0 0 .2rem $color-redux-active);
+
+      #one {
+         animation: reduxAnim .4s infinite reverse linear;
+      }
+
+      #two,
+      #tree {
+         animation: reduxAnim .4s infinite linear;
+      }
+   }
+}
+
+/*--------------------------*/
+/* ANIMATIONS */
+/*--------------------------*/
+@keyframes reduxAnim {
+   from {
+      stroke-dashoffset: 290;
+   }
+
+   to {
+      stroke-dashoffset: 130;
+   }
+}

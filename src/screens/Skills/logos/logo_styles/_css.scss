@@ -1,0 +1,72 @@
+.skills__logo--css {
+   transition: .2s cubic-bezier(0.39, 0.575, 0.565, 1);
+   stroke: $color-css;
+   height: 100%;
+   z-index: 2;
+
+   #cssLetter {
+      transition: .2s;
+   }
+
+   .bg-icon {
+      stroke: none;
+      z-index: 1;
+   }
+}
+
+//When de animation is running
+.skills__article:hover {
+
+   .skills__logo--css {
+      filter: drop-shadow(0 0 .1rem $color-css-active);
+      animation: cssAnim 3s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation-delay: .4s;
+      stroke: $color-css-active;
+
+      #cssLetter {
+         stroke: $color-css-active;
+         animation: cssAnim2 3s infinite alternate-reverse cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+   }
+
+}
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes cssAnim {
+   from {
+      filter: drop-shadow(0 0 .1rem $color-css-active);
+   }
+
+   to {
+      filter: drop-shadow(0 0 .5rem $color-css-active);
+   }
+}
+
+@keyframes cssAnim2 {
+   62% {
+      opacity: 1;
+   }
+
+   65% {
+      opacity: 0;
+   }
+
+   70% {
+      opacity: 1;
+   }
+
+   77% {
+      opacity: 1;
+   }
+
+   80% {
+      opacity: 0;
+   }
+
+   85% {
+      opacity: 1;
+   }
+}

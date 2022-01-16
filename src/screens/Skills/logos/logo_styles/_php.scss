@@ -1,0 +1,51 @@
+.skills__logo--php {
+   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+   stroke: transparent;
+   fill: $color-php;
+   stroke: $color-php;
+   stroke-dashoffset: 0;
+   stroke-dasharray: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+}
+
+//When de animation is running
+.skills__article:hover {
+
+   .skills__logo--php {
+      fill: $color-php-active;
+      stroke: $color-php-active;
+      filter: drop-shadow(0 0 .1rem $color-php-active);
+      stroke-dashoffset: 100;
+      animation: phpStroke .6s infinite alternate ease-in, phpAnim 2s ease-in-out;
+
+   }
+}
+
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes phpAnim {
+   from {
+      stroke-dashoffset: 496;
+      stroke-dasharray: 471;
+   }
+
+   to {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+   }
+}
+
+@keyframes phpStroke {
+   from {
+      filter: drop-shadow(0 0 .1rem $color-php-active);
+   }
+
+   to {
+      filter: drop-shadow(0 0 .5rem $color-php-active);
+   }
+}

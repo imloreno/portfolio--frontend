@@ -1,0 +1,100 @@
+.loading {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 50%;
+   left: 50%;
+   width: 20rem;
+   height: 20rem;
+   filter: url(#liquidFilter);
+   transform: translate(-50%, -50%);
+   animation: rotate 2s infinite linear;
+}
+
+.loading__center {
+   width: 4rem;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   background: $color-secondary;
+   animation: middlecircle 0.5s infinite linear alternate;
+}
+
+.loading-circle__content {
+   position: absolute;
+   width: 10rem;
+   aspect-ratio: 1/1;
+   animation: mainCircle 2s infinite linear;
+}
+
+.loading-circle__content .loading__circle {
+   position: absolute;
+   list-style: none;
+   width: 2rem;
+   aspect-ratio: 1/1;
+   background: $color-secondary;
+   border-radius: 50%;
+}
+
+.loading-circle__content .loading__circle:nth-child(1) {
+   left: 50%;
+   top: calc(50% - 1rem);
+   animation: movea 0.5s ease-in infinite alternate;
+}
+
+.loading-circle__content .loading__circle:nth-child(2) {
+   right: 50%;
+   top: calc(50% - 1rem);
+   animation: moveb 0.5s ease-in infinite alternate;
+}
+
+.loading-circle__content .loading__circle:nth-child(3) {
+   right: calc(50% - 1rem);
+   top: 50%;
+   animation: movec 0.5s ease-in infinite alternate;
+}
+
+.loading-circle__content .loading__circle:nth-child(4) {
+   right: calc(50% - 1rem);
+   bottom: 50%;
+   animation: moved 0.5s ease-in infinite alternate;
+}
+
+/*---------------------------------*/
+/* ANIMATION */
+/*---------------------------------*/
+@keyframes middlecircle {
+   to {
+      transform: scale(0.5);
+   }
+}
+
+@keyframes mainCircle {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes movea {
+   to {
+      transform: translateX(3rem);
+   }
+}
+
+@keyframes moveb {
+   to {
+      transform: translateX(-3rem);
+   }
+}
+
+@keyframes movec {
+   to {
+      transform: translateY(3rem);
+   }
+}
+
+@keyframes moved {
+   to {
+      transform: translateY(-3rem);
+   }
+}

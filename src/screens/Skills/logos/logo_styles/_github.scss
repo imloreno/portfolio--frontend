@@ -1,0 +1,36 @@
+.skills__logo--github {
+   overflow: hidden;
+   stroke: $color-github;
+   transition: .5s;
+   height: 100%;
+   width: 100%;
+   stroke-width: .1rem;
+   fill: none;
+   overflow: visible;
+   z-index: 2;
+
+   #eyes {
+      transition: .5s;
+      stroke: none;
+      fill: $color-github;
+   }
+
+   #tail {
+      transition: .2s;
+   }
+
+   #body {
+      fill: $color-extra-b;
+   }
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--github {
+      stroke: $color-github-active;
+
+      #eyes {
+         fill: $color-github-active;
+      }
+   }
+}

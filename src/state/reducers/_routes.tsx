@@ -36,13 +36,13 @@ const initialState = {
       path: "/skills",
       icon: "skills",
       text: "Habilidades",
-      component: "home",
+      component: "skills",
     },
     {
       path: "/projects",
       icon: "projects",
-      text: "Experiencia",
-      component: "home",
+      text: "Experiencia profesional",
+      component: "projects",
     },
     {
       path: "/academy",

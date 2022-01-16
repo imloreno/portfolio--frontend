@@ -1,0 +1,137 @@
+.skills__logo--ai {
+   stroke: $color-ai;
+   stroke-linecap: round;
+   stroke-width: .2rem;
+   width: 100%;
+   height: 100%;
+
+   #topleft {
+      transition: 1s;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 250;
+   }
+
+   #topright {
+      transition: 1s;
+      stroke-dashoffset: 20;
+      stroke-dasharray: 260;
+   }
+
+   #i {
+      transition: .5s;
+      stroke-dashoffset: 115;
+      stroke-dasharray: 55;
+   }
+
+   #point {
+      transition: .3s;
+      fill: $color-ai;
+      stroke: none;
+   }
+
+   #a1,
+   #a2 {
+      transition: .2s;
+   }
+
+   #topleft,
+   #topright,
+   #a1,
+   #a2 {
+      fill: transparent;
+   }
+
+   .light {
+      transition: .2s;
+      animation-delay: 1.2s;
+      stroke-dasharray: 35;
+      stroke-dashoffset: -15;
+      stroke-width: .1rem;
+   }
+
+
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--ai {
+      stroke: $color-ai-active;
+
+      #topleft {
+         animation: aiStartA 2s cubic-bezier(0.23, 1, 0.320, 1)
+      }
+
+      #topright {
+         animation: aiStartB 2s cubic-bezier(0.23, 1, 0.320, 1)
+      }
+
+      #i {
+         animation: aiI .5s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+
+      .light {
+         animation: aiAnim 2s infinite;
+      }
+
+      .light--reverse {
+         animation-direction: reverse;
+         animation-delay: 1.3s;
+      }
+
+      #point {
+         fill: $color-ai-active;
+      }
+   }
+}
+
+/*----------------------------------------*/
+/* Keyframes */
+/*----------------------------------------*/
+@keyframes aiI {
+   from {
+      stroke-dashoffset: 170;
+      stroke-dasharray: 55;
+   }
+
+   to {
+      stroke-dashoffset: 115;
+   }
+}
+
+@keyframes aiStartA {
+   from {
+      stroke-dashoffset: 260;
+      stroke-dasharray: 250;
+   }
+
+   to {
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes aiStartB {
+   from {
+      stroke-dashoffset: 270;
+      stroke-dasharray: 260;
+   }
+
+   to {
+      stroke-dashoffset: 20;
+   }
+}
+
+@keyframes aiAnim {
+   0% {
+      stroke-dasharray: 35;
+      stroke-dashoffset: -15;
+   }
+
+   70% {
+      stroke-dasharray: 35;
+      stroke-dashoffset: -15;
+   }
+
+   100% {
+      stroke-dashoffset: 35;
+   }
+}

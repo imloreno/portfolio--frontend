@@ -1,0 +1,175 @@
+[
+   {
+      "type": "html",
+      "title": "HTML",
+      "since": 2019,
+      "web": "https://developer.mozilla.org/es/docs/Web/HTML",
+      "habilities": [
+         "Senmantic HTML",
+         "Performance",
+         "Lazy loading",
+         "SEO",
+         "Layout",
+         "Vectorial animation",
+         "Forms",
+         "SVG"
+      ]
+   },
+   {
+      "type": "css",
+      "title": "CSS",
+      "since": 2019,
+      "web": "https://developer.mozilla.org/es/docs/Web/CSS",
+      "habilities": [
+         "Responsive design",
+         "Layout",
+         "Grid layout",
+         "Flex layout",
+         "Animations",
+         "Vectorial animation"
+      ]
+   },
+   {
+      "type": "sass",
+      "title": "SASS",
+      "since": 2020,
+      "web": "https://sass-lang.com/",
+      "habilities": [
+         "Variables",
+         "Functions",
+         "Mixins",
+         "Inheritance"
+      ]
+   },
+   {
+      "type": "es6",
+      "title": "Javascript (ES6+)",
+      "since": 2019,
+      "web": "https://developer.mozilla.org/es/docs/Web/Javascript",
+      "habilities": [
+         "Document object model",
+         "POO",
+         "Vectorial animations",
+         "Functional programming",
+         "API Rest",
+         "Asynchronism",
+         "Data management"
+      ]
+   },
+   {
+      "type": "react",
+      "title": "React",
+      "since": 2020,
+      "web": "https://es.reactjs.org/",
+      "habilities": [
+         "Hooks",
+         "API Rest",
+         "React router",
+         "State management",
+         "Functional programming",
+         "POO",
+         "Clean code"
+      ]
+   },
+   {
+      "type": "redux",
+      "title": "Redux",
+      "since": 2021,
+      "web": "https://es.redux.js.org/",
+      "habilities": [
+         "State Management"
+      ]
+   },
+   {
+      "type": "php",
+      "title": "PHP",
+      "since": 2020,
+      "web": "https://www.php.net/",
+      "habilities": [
+         "Object orient programming",
+         "Model View Controller",
+         "Database connection",
+         "API Rest",
+         "CRUD"
+      ]
+   },
+   {
+      "type": "mysql",
+      "title": "MYSQL",
+      "since": 2020,
+      "web": "https://www.mysql.com/",
+      "habilities": [
+         "CRUD",
+         "Subconsults",
+         "Inner joins"
+      ]
+   },
+   {
+      "type": "git",
+      "title": "GIT",
+      "since": 2020,
+      "web": "https://git-scm.com/",
+      "habilities": [
+         "Commit management",
+         "Pull",
+         "Push",
+         "Checkout",
+         "Reset",
+         "Branch management"
+      ]
+   },
+   {
+      "type": "github",
+      "title": "Github",
+      "since": 2020,
+      "web": "https://github.com/",
+      "habilities": [
+         "Version control"
+      ]
+   },
+   {
+      "type": "vscode",
+      "title": "V.S. code",
+      "since": 2019,
+      "web": "https://code.visualstudio.com/",
+      "habilities": [
+         "Extension management",
+         "Console",
+         "Snippets",
+         "Key shortcuts"
+      ]
+   },
+   {
+      "type": "psd",
+      "title": "Photoshop",
+      "since": 2016,
+      "web": "https://helpx.adobe.com/photoshop/user-guide.html",
+      "habilities": [
+         "Photo edition",
+         "Animations",
+         "Texturing",
+         "Color management"
+      ]
+   },
+   {
+      "type": "ai",
+      "title": "Illustrator",
+      "since": 2018,
+      "web": "https://helpx.adobe.com/illustrator/user-guide.html",
+      "habilities": [
+         "Drawing",
+         "Logo desing",
+         "Color management"
+      ]
+   },
+   {
+      "type": "figma",
+      "title": "Figma",
+      "since": 2020,
+      "web": "https://www.figma.com/files/recent?fuid=873924053938472197",
+      "habilities": [
+         "Layout",
+         "UI"
+      ]
+   }
+]

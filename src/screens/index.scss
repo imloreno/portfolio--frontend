@@ -1,1 +1,13 @@
-@import "Home";
+@import "loading";
+@import "home";
+@import "skills";
+@import "experience";
+
+.body {
+   position: relative;
+   display: grid;
+   gap: 2rem;
+   grid-template-columns: auto 1fr;
+   padding: 3rem;
+   height: 100vh;
+}

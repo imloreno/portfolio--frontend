@@ -1,0 +1,30 @@
+.skills__logo--sass {
+   stroke-dashoffset: 910;
+   stroke-dasharray: 1806;
+   width: 100%;
+   height: 100%;
+   stroke: $color-sass;
+   transition: 3s cubic-bezier(0.23, 1, 0.320, 1);
+   z-index: 2;
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--sass {
+      stroke: $color-sass-active;
+      animation: sassAnimation 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+   }
+}
+
+/*--------------------------------*/
+/* ANIMATION */
+/*--------------------------------*/
+@keyframes sassAnimation {
+   from {
+      stroke-dasharray: 906;
+   }
+
+   to {
+      stroke-dasharray: 1806;
+   }
+}

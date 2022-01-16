@@ -1,7 +1,11 @@
 .menu {
+   position: sticky;
+   top: 2rem;
+   left: 2rem;
    background: $color-secondary;
    padding: 2rem 0;
    border-radius: $radius-a;
+   height: 100%;
 
    .menu__list {
       position: relative;

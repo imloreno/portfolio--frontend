@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "screens/Home";
+
+import Main from "screens";
 
 interface routes {
   component: string;
@@ -13,9 +14,13 @@ interface routes {
 const getComponent = (target: string, index: number): JSX.Element => {
   switch (target) {
     case "home":
-      return <Home />;
+      return <Main screen="home" />;
+    case "skills":
+      return <Main screen="skills" />;
+    case "projects":
+      return <Main screen="projects" />;
     default:
-      return <Home />;
+      return <Main screen="home" />;
   }
 };
 

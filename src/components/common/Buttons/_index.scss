@@ -1,9 +1,16 @@
 .button {
    padding: .5rem 1rem;
+   width: fit-content;
    border-radius: .4rem;
    font-size: $font-normal-a;
    outline: none;
-   border: none
+   border: none;
+   transition: .2s;
+   will-change: transform;
+
+   &:hover {
+      animation: buttonDefault .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+   }
 }
 
 .button__default {
@@ -14,5 +21,26 @@
 
    &:active {
       transform: scale(.95);
+   }
+}
+
+/*-----------------------------*/
+/* ANIMATIONS */
+/*-----------------------------*/
+@keyframes buttonDefault {
+   0% {
+      transform: none;
+   }
+
+   20% {
+      transform: rotate(1deg);
+   }
+
+   80% {
+      transform: rotate(-1deg);
+   }
+
+   100% {
+      transform: none;
    }
 }

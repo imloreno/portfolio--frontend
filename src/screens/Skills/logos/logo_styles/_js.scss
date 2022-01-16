@@ -1,0 +1,76 @@
+.skills__logo--es6 {
+   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+   stroke: $color-js;
+   z-index: 2;
+   stroke-dashoffset: 0;
+   stroke-dasharray: 0;
+   height: 100%;
+
+   #letters {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+   }
+
+   #flag {
+      transition: 0;
+      stroke: none;
+      fill: $color-js;
+   }
+
+   #text {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 0;
+      stroke: $color-main;
+      fill: $color-main;
+   }
+}
+
+//When de animation is running
+.skills__article:hover {
+
+   .skills__logo--es6 {
+      filter: drop-shadow(0 0 .1rem $color-js-active);
+      stroke-dashoffset: 0;
+      stroke-dasharray: 20;
+      opacity: 1;
+      animation: 5s infinite alternate cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation-name: jsAnim, jsAnim2;
+      animation-duration: 2s, 5s;
+      animation-delay: 1s;
+      stroke: $color-js-active;
+
+      #flag {
+         stroke: $color-js-active;
+         fill: $color-js-active;
+      }
+
+      #text {
+         fill: white;
+      }
+   }
+}
+
+/*-------------------------------*/
+/* Animations */
+/*-------------------------------*/
+
+@keyframes jsAnim {
+   from {
+      filter: drop-shadow(0 0 .1rem $color-js-active);
+   }
+
+   to {
+      filter: drop-shadow(0 0 .5rem $color-js-active);
+   }
+}
+
+@keyframes jsAnim2 {
+   from {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 20;
+   }
+
+   to {
+      stroke-dasharray: 80;
+   }
+}

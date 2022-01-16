@@ -1,0 +1,51 @@
+.skills__logo--mysql {
+   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+   fill: $color-mysql;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+
+   #mysqlEye {
+      transform: translate(-33px, -30px);
+      transform-origin: center;
+
+   }
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--mysql {
+      fill: $color-mysql-active;
+      filter: drop-shadow(.2rem -.2rem .2rem rgba(0, 0, 0, 0.562));
+
+      #mysqlEye {
+         animation: 2.5s mysqlAnim infinite linear;
+
+      }
+   }
+}
+
+/*------------------------------*/
+/* ANIMATIONS */
+/*------------------------------*/
+@keyframes mysqlAnim {
+   70% {
+      transform: translate(-33px, -30px) scale(1);
+   }
+
+   75% {
+      transform: translate(-33px, -30px) scale(.3);
+   }
+
+   80% {
+      transform: translate(-33px, -30px) scale(1);
+   }
+
+   85% {
+      transform: translate(-33px, -30px) scale(.3);
+   }
+
+   90% {
+      transform: translate(-33px, -30px) scale(1);
+   }
+}

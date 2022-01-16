@@ -8,6 +8,7 @@
 
 :root {
    @include theme1;
+   @include logos-light;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
    font-size: $font-normal-a;
    font-weight: 500;
    background: $color-main;
+   -webkit-tap-highlight-color: transparent;
 }
 
 li {
@@ -28,4 +30,28 @@ a {
 .title {
    font-size: $font-title-a;
    font-weight: 600;
+}
+
+.subtitle {
+   font-size: $font-subtitle-a;
+   font-weight: 600;
+}
+
+.scroll {
+
+   /* width */
+   &::-webkit-scrollbar {
+      width: .5rem;
+   }
+
+   /* Track */
+   &::-webkit-scrollbar-track {
+      background: #e9eaec;
+   }
+
+   /* Handle */
+   &::-webkit-scrollbar-thumb {
+      background: $color-secondary;
+      border-radius: .2rem;
+   }
 }

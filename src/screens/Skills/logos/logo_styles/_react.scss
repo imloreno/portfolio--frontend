@@ -1,0 +1,70 @@
+.skills__logo--react {
+   height: 100%;
+   width: 100%;
+   stroke: $color-react;
+   z-index: 2;
+
+   #center {
+      transition: .2s linear;
+      fill: $color-react;
+      transform-origin: center;
+      stroke: none;
+   }
+
+   #one,
+   #two,
+   #tre {
+      transition: .0s linear;
+      filter: drop-shadow(0 0 .5rem $color-react-active);
+      stroke-linecap: round;
+   }
+
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--react {
+      stroke: $color-react-active;
+
+      #center {
+         opacity: 1;
+         animation: reactAnim2 .3s linear infinite alternate;
+         fill: $color-react-active;
+      }
+
+      #one,
+      #two,
+      #tre {
+         animation: .3s reactAnim infinite linear;
+         stroke-dasharray: 50;
+         stroke-dashoffset: -286;
+         opacity: 1;
+      }
+   }
+}
+
+/*--------------------------*/
+/* ANIMATIONS */
+/*--------------------------*/
+@keyframes reactAnim {
+   from {
+      stroke-dasharray: 50;
+      stroke-dashoffset: -286;
+   }
+
+   to {
+      stroke-dashoffset: -386;
+   }
+}
+
+@keyframes reactAnim2 {
+   from {
+      opacity: 1;
+      transform: scale(.8);
+   }
+
+   to {
+      opacity: .5;
+      transform: scale(1.1);
+   }
+}

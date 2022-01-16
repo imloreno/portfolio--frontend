@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-const Index = () => {
+const Menu = () => {
   //Page number
   const [pageTarget, setPageTarget] = useState(0);
 
@@ -46,4 +46,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Menu;

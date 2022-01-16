@@ -1,0 +1,95 @@
+.skills {
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: 2fr 1fr;
+   grid-template-rows: auto 1fr;
+   max-height: 100%;
+   overflow-y: hidden;
+
+   .skills__header {
+      padding: 1rem;
+      padding-bottom: 0;
+   }
+
+   .skills__items-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
+      grid-auto-rows: max-content;
+      padding: 1rem;
+      overflow-y: auto;
+
+      .skills__article {
+         text-align: center;
+         cursor: pointer;
+
+         .skills__logo {
+            position: relative;
+            padding: 1rem;
+            padding-bottom: .8rem;
+            width: 100%;
+            height: 8rem;
+            border-radius: $radius-a;
+            background: $color-extra-b;
+            transition: .5s;
+
+            .skills__logo-svg {
+               position: relative;
+               z-index: 1;
+            }
+         }
+
+         &:hover {
+            z-index: 1;
+
+            .skills__logo {
+               transform: translateY(-.2rem);
+               box-shadow: 0 .5rem 1rem 0 #b9b9b9;
+            }
+         }
+
+         .skills__logo-title {
+            margin-top: .5rem;
+            font-size: $font-small-a;
+         }
+
+      }
+   }
+
+   .skills__item-list {
+      grid-row: span 2;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      padding: 0 1rem;
+      overflow-y: auto;
+
+      .skills__item-title {
+         font-size: $font-small-a;
+         font-weight: 600;
+      }
+
+      .skills__item-habilities {
+         font-size: $font-litle-a;
+      }
+
+      .skills__item-bar {
+         margin-top: .3rem;
+         width: 100%;
+         background: $color-extra-c;
+         border-radius: .2rem;
+
+         .skills__item-bar--level {
+            width: 70%;
+            height: .3rem;
+            background: $color-secondary;
+            border-radius: .2rem
+         }
+      }
+   }
+}
+
+//---------------------------
+// LOGO STYLES
+//---------------------------
+@import "./logos/logo_styles/";

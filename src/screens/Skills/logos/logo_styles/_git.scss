@@ -1,0 +1,27 @@
+.skills__logo--git {
+   stroke: $color-git;
+   transition: .5s;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+}
+
+//When de animation is running
+.skills__article:hover {
+   .skills__logo--git {
+      stroke: $color-git-active;
+      animation: .7s gitAnim infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+      stroke-dasharray: 36;
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes gitAnim {
+   from {
+      stroke-dashoffset: 0;
+   }
+
+   to {
+      stroke-dashoffset: 73;
+   }
+}

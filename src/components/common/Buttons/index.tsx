@@ -5,7 +5,7 @@ interface Props {
   onClick?: () => {};
 }
 
-const index = (props: Props) => {
+const Buttons = (props: Props) => {
   const { type, text, className, onClick } = props;
   const buttonTypes: any = {
     default: "button__default",
@@ -22,4 +22,4 @@ const index = (props: Props) => {
   );
 };
 
-export default index;
+export default Buttons;

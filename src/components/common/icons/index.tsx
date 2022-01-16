@@ -5,6 +5,8 @@ import {
   FiCoffee,
   FiGitBranch,
   FiFeather,
+  FiChevronLeft,
+  FiChevronRight,
 } from "react-icons/fi";
 
 //Props structure
@@ -13,7 +15,7 @@ interface props {
   type: string;
 }
 
-const Index = (props: props): JSX.Element => {
+const Icons = (props: props): JSX.Element => {
   const { className, type } = props;
 
   switch (type) {
@@ -29,9 +31,13 @@ const Index = (props: props): JSX.Element => {
       return <FiFeather className={className ?? ""} />;
     case "contact":
       return <FiMessageSquare className={className ?? ""} />;
+    case "left":
+      return <FiChevronLeft className={className ?? ""} />;
+    case "right":
+      return <FiChevronRight className={className ?? ""} />;
     default:
       return <FiHome className={className ?? ""} />;
   }
 };
 
-export default Index;
+export default Icons;
