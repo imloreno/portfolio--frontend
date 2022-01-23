@@ -2,81 +2,86 @@
 // THEME 1
 //-------------------------
 @mixin theme1 {
-   --color-main: #f8f8f8;
-   --color-secondary: #000000;
-   --color-extra-a: #ff9b21;
-   // --color-extra-b: #ffe7ca;
-   --color-extra-b: #eff1f1;
-   --color-extra-c: #b9bff8;
+   --color-main: #252a31;
+   --color-secondary: #1a1a1a;
+   --color-text-a: #c0c4c3;
+   --color-extra-a: #e7a554;
+   --color-extra-b: #1a1a1a;
+   --color-extra-c: #76777e;
 }
+
+// @mixin theme1 {
+//    --color-main: #f8f8f8;
+//    --color-secondary: #000000;
+//    --color-text-a: #000000;
+//    --color-extra-a: #ff9b21;
+//    --color-extra-b: #eff1f1;
+//    --color-extra-c: #d6dafc;
+// }
 
 //HTML logos
-@mixin logos-dark {
-   --color-html: #462627;
-   --color-html-active: #cf1b24;
-   --color-css: #1e2a2c;
-   --color-css-active: #33dce2;
-   --color-sass: #382238;
-   --color-sass-active: #e741e7;
-   --color-js: #46330c;
-   --color-js-active: #f3aa17;
-   --color-react: #212c30;
-   --color-react-active: #61dafb;
-   --color-mysql: #2c4636;
-   --color-mysql-active: #23af59;
-   --color-router: #4b1122c2;
-   --color-router-active: #b11c3c;
-   --color-redux: #564080c2;
-   --color-redux-active: #873cff;
-   --color-context: #26306bc2;
-   --color-context-active: #263cff;
-   --color-php: #34525ac2;
-   --color-php-active: #6ecaff;
-   --color-git: #532e2eb2;
-   --color-git-active: #ca2222;
-   --color-vscode: #143a50;
-   --color-vscode-active: #2d7ec0;
-   --color-github: #524c18;
-   --color-github-active: #f8e74f;
-   --color-linux: #494949;
-   --color-linux-active: #757575;
-   --color-psd: #263e49;
-   --color-psd-active: #2b76d8;
-   --color-ai: #584431;
-   --color-ai-active: #c77913;
-   --color-figma: #4e3b17;
-   --color-figma-active: #e79222;
-}
-
 @mixin logos-light {
-   --color-html: #df9d9f;
+   --color-html: #534344;
    --color-html-active: #cf1b24;
-   --color-css: #a5bfc4;
+   --color-css: #394142;
    --color-css-active: #1eb6bb;
-   --color-sass: #e0bde0;
-   --color-sass-active: #db32b1;
-   --color-js: #ecc472;
+   --color-sass: #534353;
+   --color-sass-active: #b12c54;
+   --color-js: #524832;
    --color-js-active: #dd9b16;
-   --color-react: #96d9f3;
+   --color-react: #37474d;
    --color-react-active: #3bb2d3;
    --color-router: #4b1122c2;
    --color-router-active: #b11c3c;
-   --color-redux: #b9a4e2c2;
-   --color-redux-active: #500ac2;
-   --color-php: #90c2cfc2;
+   --color-redux: #4a415ac2;
+   --color-redux-active: #8529af;
+   --color-php: #374144;
    --color-php-active: #249be0;
-   --color-mysql: #b1dbc1;
+   --color-mysql: #39493f;
    --color-mysql-active: #0cb64d;
-   --color-git: #e08a8a;
-   --color-git-active: #ce0b0b;
-   --color-github: #a8a8a8;
-   --color-github-active: #000000;
-   --color-vscode: #8fbfdb;
+   --color-git: #583333;
+   --color-git-active: #e2451e;
+   --color-github: #424242;
+   --color-github-active: #fffefe;
+   --color-vscode: #2c3b44;
    --color-vscode-active: #4793c5;
-   --color-psd: #9bd3ec;
+   --color-psd: #2a3b42;
    --color-psd-active: #1c7ad1;
-   --color-ai: #ece1a2;
+   --color-ai: #4d4937;
    --color-ai-active: #db843c;
-   --color-figma: #e79587;
-   --color-figma-active: #e72222;
+   --color-figma: #462d29;
+   --color-figma-active: #d14141;
 }
+
+// @mixin logos-light {
+//    --color-html: #df9d9f;
+//    --color-html-active: #cf1b24;
+//    --color-css: #a5bfc4;
+//    --color-css-active: #1eb6bb;
+//    --color-sass: #e0bde0;
+//    --color-sass-active: #db32b1;
+//    --color-js: #ecc472;
+//    --color-js-active: #dd9b16;
+//    --color-react: #96d9f3;
+//    --color-react-active: #3bb2d3;
+//    --color-router: #4b1122c2;
+//    --color-router-active: #b11c3c;
+//    --color-redux: #b9a4e2c2;
+//    --color-redux-active: #500ac2;
+//    --color-php: #90c2cfc2;
+//    --color-php-active: #249be0;
+//    --color-mysql: #b1dbc1;
+//    --color-mysql-active: #0cb64d;
+//    --color-git: #e08a8a;
+//    --color-git-active: #ce0b0b;
+//    --color-github: #a8a8a8;
+//    --color-github-active: #000000;
+//    --color-vscode: #8fbfdb;
+//    --color-vscode-active: #4793c5;
+//    --color-psd: #9bd3ec;
+//    --color-psd-active: #1c7ad1;
+//    --color-ai: #ece1a2;
+//    --color-ai-active: #db843c;
+//    --color-figma: #e79587;
+//    --color-figma-active: #e72222;
+// }

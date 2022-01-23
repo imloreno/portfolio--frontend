@@ -1,5 +1,6 @@
 .skills__logo--git {
    stroke: $color-git;
+   stroke-linecap: round;
    transition: .5s;
    width: 100%;
    height: 100%;
@@ -10,7 +11,7 @@
 .skills__article:hover {
    .skills__logo--git {
       stroke: $color-git-active;
-      animation: .7s gitAnim infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+      animation: .7s gitAnim infinite linear;
       stroke-dasharray: 36;
       stroke-dashoffset: 0;
    }

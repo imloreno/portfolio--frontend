@@ -2,7 +2,7 @@ import React from "react";
 
 const filter = () => {
   return (
-    <div style={{ position: "absolute", width: 0, height: 0 }}>
+    <div style={{ position: "absolute", width: 0, height: 0, zIndex: "-1" }}>
       <svg>
         <defs>
           <filter id="liquidFilter">

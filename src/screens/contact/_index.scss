@@ -1,0 +1,152 @@
+.contact {
+   height: 100%;
+   overflow-y: auto;
+
+   .contact__header {
+      margin-bottom: 1rem;
+
+      .contact__title {
+         text-align: center;
+      }
+   }
+
+   .contact__form {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      padding: 3rem;
+      margin: auto;
+      width: 30rem;
+      height: fit-content;
+      align-items: center;
+      // border-radius: $radius-a;
+      background: $color-secondary;
+      animation: boxOpen 1.5s;
+
+
+      .contact__buttons {
+         display: flex;
+         gap: 2rem;
+         margin-bottom: 1rem;
+         filter: url(#liquidFilter);
+
+         a {
+            position: relative;
+
+            li {
+               position: relative;
+               align-items: center;
+               display: flex;
+               justify-content: center;
+               width: 3rem;
+               aspect-ratio: 1 / 1;
+               font-size: 1.5rem;
+               color: $color-text-a;
+               background: $color-main;
+               border-radius: 50%;
+
+               .contact__icon {
+                  position: relative;
+                  transition: .2s;
+                  z-index: 1;
+               }
+
+               &::before {
+                  transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                  position: absolute;
+                  content: '';
+                  width: 2rem;
+                  aspect-ratio: 1/1;
+                  top: .5rem;
+                  right: .5rem;
+                  border-radius: 50%;
+                  background: $color-main;
+               }
+
+               &::after {
+                  transition: .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+                  position: absolute;
+                  content: '';
+                  width: 2.5rem;
+                  aspect-ratio: 1/1;
+                  bottom: .2rem;
+                  right: .2rem;
+                  border-radius: 50%;
+                  background: $color-main;
+               }
+
+
+            }
+
+            &::before {
+               transition: .2s;
+               content: '';
+               position: absolute;
+               width: 1.5rem;
+               height: 1.5rem;
+               top: 30%;
+               left: .2rem;
+               border-radius: 50%;
+               background: $color-main;
+
+            }
+
+            &:hover {
+               li {
+
+                  .contact__icon {
+                     transform: scale(.9);
+                  }
+
+                  &::before {
+                     transform: translate(1.5rem, -1.5rem);
+                  }
+
+                  &::after {
+                     transform: translate(1.7rem, 1.7rem);
+                  }
+               }
+
+               &::before {
+                  transform: translateX(-.9rem);
+               }
+            }
+         }
+      }
+
+      input,
+      textarea {
+         position: relative;
+         width: 100%;
+         padding: .8rem 1.5rem;
+         outline: none;
+         border: .13rem solid transparent;
+         color: $color-text-a;
+         background: $color-main;
+         font-size: $font-normal-a;
+         font-family: 'Quicksand', sans-serif;
+
+         &:focus {
+            border: .13rem solid $color-extra-a;
+         }
+      }
+
+      textarea {
+         resize: vertical;
+         height: 8rem;
+      }
+
+      .input-error {
+         border: .13rem solid #ec6464 !important;
+      }
+
+      .status-send {
+         color: $color-extra-a;
+      }
+
+      .error-msg {
+         color: #ec6464;
+      }
+
+   }
+}

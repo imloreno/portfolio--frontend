@@ -1,0 +1,121 @@
+@import "ArticleAcademy";
+
+.academy {
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+   height: 100%;
+   // max-height: 100%;
+   overflow-y: auto;
+
+   .academy__title {
+      text-align: center;
+   }
+
+   .academy__container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      height: 100%;
+
+      .academy__area_a {
+         padding: 0 2.5rem;
+         height: 100%;
+         text-align: right;
+         animation: startFromBottom 1s;
+
+         .academy__item {
+            position: relative;
+            width: 80%;
+            margin-left: auto;
+            margin-bottom: 2rem;
+            border-right: 3px solid $color-secondary;
+            // border-bottom: 3px solid $color-secondary;
+
+            &:before {
+               position: absolute;
+               content: "";
+               width: 2.7rem;
+               height: 3px;
+               top: 50%;
+               right: -2.9rem;
+               background: $color-secondary;
+            }
+
+            &::after {
+               position: absolute;
+               content: "";
+               width: .5rem;
+               height: .5rem;
+               top: 50%;
+               right: -3.25rem;
+               background: $color-main;
+               border-radius: 50%;
+               border: 3px solid $color-secondary;
+               transform: translateY(-40%);
+               z-index: 1;
+            }
+         }
+      }
+
+      .academy__area_b {
+         padding: 0 2.5rem;
+         height: 100%;
+         animation: startFromBottom 2s;
+
+         .academy__item {
+            position: relative;
+            width: 80%;
+            margin-right: auto;
+            border-left: 3px solid $color-secondary;
+
+            &:before {
+               position: absolute;
+               content: "";
+               width: 3rem;
+               height: 3px;
+               top: 15%;
+               left: -3rem;
+               background: $color-secondary;
+            }
+
+            &::after {
+               position: absolute;
+               content: "";
+               width: .5rem;
+               height: .5rem;
+               top: 15%;
+               left: -3rem;
+               background: $color-main;
+               border-radius: 50%;
+               border: 3px solid $color-secondary;
+               transform: translateY(-40%);
+               z-index: 1;
+            }
+         }
+      }
+
+      &::before {
+         position: absolute;
+         content: "";
+         top: 0;
+         height: 100%;
+         left: 50%;
+         border-left: 3px solid $color-secondary;
+      }
+
+      &::after {
+         position: absolute;
+         content: "";
+         width: .5rem;
+         height: .5rem;
+         top: 0;
+         left: 50%;
+         transform: translateX(-40%);
+         background: $color-main;
+         border: 3px solid $color-secondary;
+         border-radius: 50%;
+      }
+   }
+}

@@ -1,0 +1,47 @@
+@keyframes startFromRight {
+   from {
+      transform: translateX(5rem);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes startFromLeft {
+   from {
+      transform: translateX(-5rem);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+
+@keyframes startFromBottom {
+   from {
+      transform: translateY(10rem);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+@keyframes boxOpen {
+   from {
+      transform: scale(.9) rotate(-5deg);
+      opacity: 0;
+   }
+
+   to {
+      transform: scale(1) rotate(0);
+      opacity: 1;
+   }
+}

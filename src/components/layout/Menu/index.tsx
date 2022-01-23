@@ -1,9 +1,21 @@
 import Icons from "components/common/icons";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const Menu = () => {
+const Menu = (props: { setIsLoading: any }) => {
+  const { setIsLoading } = props;
+  //Navigation
+  const navigate = useNavigate();
+  const handleNavigation = (props: { e: any; path: string }) => {
+    props.e.preventDefault();
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate(props.path);
+    }, 250);
+  };
+
   //Page number
   const [pageTarget, setPageTarget] = useState(0);
 
@@ -20,7 +32,7 @@ const Menu = () => {
       item.className === "active" && setPageTarget(index);
     });
   });
-
+  //Adding active classlist
   const isActive = (props: { isActive: boolean }) => {
     return props.isActive ? "active" : "";
   };
@@ -34,9 +46,17 @@ const Menu = () => {
             style={{ transform: `translateY(${4 * (pageTarget - 1)}rem)` }}
           ></div>
           {PAGES.map((item: any, index: number) => (
-            <NavLink to={item.path} className={isActive} key={index}>
+            <NavLink
+              to={item.path}
+              className={isActive}
+              key={index}
+              onClick={(e) => handleNavigation({ e, path: item.path })}
+            >
               <li className="menu__item">
                 <Icons type={item.icon} />
+                <div className="menu__item--popup">
+                  <span>{item.text}</span>
+                </div>
               </li>
             </NavLink>
           ))}

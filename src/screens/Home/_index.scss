@@ -1,50 +1,126 @@
 .container {
+   position: relative;
    display: grid;
-   column-gap: 1rem;
+   gap: 2rem;
    grid-template-columns: 1fr 20rem;
-   grid-template-rows: auto 1fr;
+   grid-template-rows: 15rem 1fr;
+   padding-left: 1rem;
+
+   .container__header {
+      grid-column: span 2;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      color: white;
+      background: url("../../assets/banner.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 0 2rem;
+
+      .container__title {
+         position: relative;
+         width: fit-content;
+         animation: startFromLeft 1s ease-in-out;
+         z-index: 1;
+      }
+
+      .container__subtitle {
+         z-index: 1;
+         position: relative;
+         animation: startFromLeft 2s ease-in-out;
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.521) 50%, transparent);
+      }
+   }
 
    .container__introduction {
       display: flex;
       gap: 1rem;
       flex-direction: column;
+
+      .container__introduction-title {
+         animation: startFromRight 1s;
+      }
+
+      .container__paragraph {
+         animation: startFromLeft 2s;
+      }
    }
 
    .container__box {
       border-radius: $radius-a;
-      padding: 1rem;
-   }
-
-   .container__data {
-      height: 100%;
-      overflow: auto;
-
-      .container__personaldata {
-         display: flex;
-         gap: .5rem;
-         flex-direction: column;
-
-         .personaldata__item {
-
-            h3 {
-               font-size: $font-normal-a;
-            }
-         }
-      }
+      padding: 0 2rem;
    }
 
    .container__profile {
-      grid-row: span 2;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      padding: 0;
-      box-shadow: 0 .5rem 3rem 0 rgba(1, 1, 1, .1);
+      position: absolute;
+      width: 20rem;
+      height: auto;
+      top: 8rem;
+      right: 2rem;
+      padding: 2rem;
+      background: $color-extra-b;
+      animation: startFromBottom 3s;
 
-      img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
+      .container-profile-photo {
+         height: 13rem;
+         width: 13rem;
+         margin: -8rem auto 1.5rem auto;
+         border-radius: 50%;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center calc(0% - 0rem);
+         }
+      }
+
+      .container__data {
+         height: fit-content;
+         color: $color-text-a;
+         font-size: $font-small-a;
+         padding: 0;
+
+         .container__personaldata {
+            display: flex;
+            gap: .5rem;
+            flex-direction: column;
+            border-left: .15rem solid $color-text-a;
+
+            .personaldata__item {
+               position: relative;
+               padding: 0 2rem;
+
+               h3 {
+                  font-size: $font-normal-a;
+               }
+
+               &::before {
+                  content: "";
+                  position: absolute;
+                  width: .5rem;
+                  height: .5rem;
+                  left: 0;
+                  top: 0;
+                  border-radius: 50%;
+                  background: $color-extra-b;
+                  outline: .15rem solid $color-text-a;
+                  transform: translateX(-65%);
+               }
+            }
+         }
       }
    }
 }

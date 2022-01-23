@@ -9,6 +9,7 @@ const Buttons = (props: Props) => {
   const { type, text, className, onClick } = props;
   const buttonTypes: any = {
     default: "button__default",
+    contrast: "button__contrast",
   };
   return (
     <button

@@ -6,6 +6,7 @@
    padding: 2rem 0;
    border-radius: $radius-a;
    height: 100%;
+   z-index: 2;
 
    .menu__list {
       position: relative;
@@ -15,7 +16,7 @@
          right: -2rem;
          width: 4rem;
          height: 4rem;
-         background: $color-secondary;
+         background: $color-extra-a;
          border: .5rem solid $color-main;
          border-radius: 50%;
          will-change: translate;
@@ -53,6 +54,7 @@
       }
 
       .menu__item {
+         position: relative;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -63,10 +65,47 @@
          transition: .6s cubic-bezier(.59, .01, .33, .99);
          will-change: transform;
          transition-delay: .3s;
+
+         .menu__item--popup {
+            transition: .2s;
+            position: absolute;
+            padding: .5rem 1rem;
+            bottom: 100%;
+            left: 50%;
+            opacity: 0;
+            transform: scale(.4);
+            pointer-events: none;
+            font-size: $font-normal-a;
+            color: $color-secondary;
+            background: $color-extra-c;
+            border-radius: .5rem;
+
+            &::before {
+               transition: .2s;
+               position: absolute;
+               content: '';
+               width: 0;
+               height: 0;
+               top: 100%;
+               left: .5rem;
+               border: .7rem solid transparent;
+               border-left: 0;
+               border-top: .5rem solid $color-extra-c;
+            }
+
+         }
+
+         &:hover {
+            .menu__item--popup {
+               opacity: 1;
+               transform: scale(1);
+            }
+         }
       }
 
       .active {
          .menu__item {
+            color: $color-secondary;
             transform: translateX(3rem) scale(.8);
          }
       }

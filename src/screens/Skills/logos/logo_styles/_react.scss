@@ -15,7 +15,6 @@
    #two,
    #tre {
       transition: .0s linear;
-      filter: drop-shadow(0 0 .5rem $color-react-active);
       stroke-linecap: round;
    }
 
@@ -37,6 +36,7 @@
       #tre {
          animation: .3s reactAnim infinite linear;
          stroke-dasharray: 50;
+         filter: drop-shadow(0 0 .5rem $color-react-active);
          stroke-dashoffset: -286;
          opacity: 1;
       }

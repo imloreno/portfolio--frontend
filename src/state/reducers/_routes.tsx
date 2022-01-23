@@ -26,12 +26,12 @@ const initialState = {
       text: "Inicio",
       component: "home",
     },
-    {
-      path: "/about",
-      icon: "about",
-      text: "Sobre Mí",
-      component: "home",
-    },
+    // {
+    //   path: "/about",
+    //   icon: "about",
+    //   text: "Sobre Mí",
+    //   component: "home",
+    // },
     {
       path: "/skills",
       icon: "skills",
@@ -48,13 +48,13 @@ const initialState = {
       path: "/academy",
       icon: "academy",
       text: "Formación",
-      component: "home",
+      component: "academy",
     },
     {
       path: "/contact",
       icon: "contact",
       text: "Contacto",
-      component: "home",
+      component: "contact",
     },
   ],
 };

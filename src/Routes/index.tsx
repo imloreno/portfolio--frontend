@@ -19,6 +19,10 @@ const getComponent = (target: string, index: number): JSX.Element => {
       return <Main screen="skills" />;
     case "projects":
       return <Main screen="projects" />;
+    case "academy":
+      return <Main screen="academy" />;
+    case "contact":
+      return <Main screen="contact" />;
     default:
       return <Main screen="home" />;
   }

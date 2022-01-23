@@ -1,5 +1,5 @@
 .button {
-   padding: .5rem 1rem;
+   padding: .8rem 1.5rem;
    width: fit-content;
    border-radius: .4rem;
    font-size: $font-normal-a;
@@ -8,19 +8,31 @@
    transition: .2s;
    will-change: transform;
 
-   &:hover {
-      animation: buttonDefault .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+   &:active {
+      transform: scale(.95);
    }
 }
 
 .button__default {
    background: $color-secondary;
-   color: $color-main;
+   color: white;
    cursor: pointer;
    transition: .2s;
 
-   &:active {
-      transform: scale(.95);
+   &:hover {
+      color: $color-extra-a;
+      animation: buttonDefault .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+   }
+}
+
+.button__contrast {
+   background: $color-extra-c;
+   color: $color-secondary;
+   cursor: pointer;
+   transition: .2s;
+
+   &:hover {
+      animation: buttonDefault .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
    }
 }
 

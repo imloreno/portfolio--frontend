@@ -3,6 +3,7 @@
       "type": "html",
       "title": "HTML",
       "since": 2019,
+      "lvl": 10,
       "web": "https://developer.mozilla.org/es/docs/Web/HTML",
       "habilities": [
          "Senmantic HTML",
@@ -19,6 +20,7 @@
       "type": "css",
       "title": "CSS",
       "since": 2019,
+      "lvl": 10,
       "web": "https://developer.mozilla.org/es/docs/Web/CSS",
       "habilities": [
          "Responsive design",
@@ -30,21 +32,10 @@
       ]
    },
    {
-      "type": "sass",
-      "title": "SASS",
-      "since": 2020,
-      "web": "https://sass-lang.com/",
-      "habilities": [
-         "Variables",
-         "Functions",
-         "Mixins",
-         "Inheritance"
-      ]
-   },
-   {
       "type": "es6",
       "title": "Javascript (ES6+)",
       "since": 2019,
+      "lvl": 10,
       "web": "https://developer.mozilla.org/es/docs/Web/Javascript",
       "habilities": [
          "Document object model",
@@ -57,9 +48,23 @@
       ]
    },
    {
+      "type": "sass",
+      "title": "SASS",
+      "since": 2020,
+      "lvl": 8,
+      "web": "https://sass-lang.com/",
+      "habilities": [
+         "Variables",
+         "Functions",
+         "Mixins",
+         "Inheritance"
+      ]
+   },
+   {
       "type": "react",
       "title": "React",
       "since": 2020,
+      "lvl": 9,
       "web": "https://es.reactjs.org/",
       "habilities": [
          "Hooks",
@@ -75,6 +80,7 @@
       "type": "redux",
       "title": "Redux",
       "since": 2021,
+      "lvl": 8,
       "web": "https://es.redux.js.org/",
       "habilities": [
          "State Management"
@@ -84,6 +90,7 @@
       "type": "php",
       "title": "PHP",
       "since": 2020,
+      "lvl": 7,
       "web": "https://www.php.net/",
       "habilities": [
          "Object orient programming",
@@ -97,6 +104,7 @@
       "type": "mysql",
       "title": "MYSQL",
       "since": 2020,
+      "lvl": 7,
       "web": "https://www.mysql.com/",
       "habilities": [
          "CRUD",
@@ -108,6 +116,7 @@
       "type": "git",
       "title": "GIT",
       "since": 2020,
+      "lvl": 8,
       "web": "https://git-scm.com/",
       "habilities": [
          "Commit management",
@@ -122,6 +131,7 @@
       "type": "github",
       "title": "Github",
       "since": 2020,
+      "lvl": 8,
       "web": "https://github.com/",
       "habilities": [
          "Version control"
@@ -131,6 +141,7 @@
       "type": "vscode",
       "title": "V.S. code",
       "since": 2019,
+      "lvl": 8,
       "web": "https://code.visualstudio.com/",
       "habilities": [
          "Extension management",
@@ -143,6 +154,7 @@
       "type": "psd",
       "title": "Photoshop",
       "since": 2016,
+      "lvl": 6,
       "web": "https://helpx.adobe.com/photoshop/user-guide.html",
       "habilities": [
          "Photo edition",
@@ -155,6 +167,7 @@
       "type": "ai",
       "title": "Illustrator",
       "since": 2018,
+      "lvl": 6,
       "web": "https://helpx.adobe.com/illustrator/user-guide.html",
       "habilities": [
          "Drawing",
@@ -166,6 +179,7 @@
       "type": "figma",
       "title": "Figma",
       "since": 2020,
+      "lvl": 5,
       "web": "https://www.figma.com/files/recent?fuid=873924053938472197",
       "habilities": [
          "Layout",
