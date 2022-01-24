@@ -1,0 +1,15 @@
+.icon-theme {
+   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+   &--dark {
+      fill: $color-extra-c;
+      transform: rotate(-150deg);
+      filter: drop-shadow(0 0 1rem $color-extra-c);
+   }
+
+   &--light {
+      fill: $color-extra-a;
+      transform: rotate(0);
+      filter: drop-shadow(0 0 1rem $color-extra-a);
+   }
+}

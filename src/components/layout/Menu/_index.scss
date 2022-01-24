@@ -1,5 +1,7 @@
 .menu {
    position: sticky;
+   display: flex;
+   align-items: center;
    top: 2rem;
    left: 2rem;
    background: $color-secondary;
@@ -7,6 +9,10 @@
    border-radius: $radius-a;
    height: 100%;
    z-index: 2;
+   user-select: none;
+
+   --cell: 4rem;
+   --target: 0;
 
    .menu__list {
       position: relative;
@@ -14,13 +20,13 @@
       .menu__active-element {
          position: absolute;
          right: -2rem;
-         width: 4rem;
-         height: 4rem;
+         width: var(--cell);
+         height: var(--cell);
          background: $color-extra-a;
          border: .5rem solid $color-main;
          border-radius: 50%;
-         will-change: translate;
-         transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+         transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+         transform: translate(0, calc(var(--cell) * var(--target)));
          will-change: transform;
          transition-delay: .2s;
 
@@ -61,10 +67,11 @@
          color: $color-main;
          font-size: 2rem;
          padding: 0 2rem;
-         height: 4rem;
+         height: var(--cell);
          transition: .6s cubic-bezier(.59, .01, .33, .99);
          will-change: transform;
-         transition-delay: .3s;
+         transition-delay: .2s;
+         cursor: pointer;
 
          .menu__item--popup {
             transition: .2s;
@@ -79,6 +86,10 @@
             color: $color-secondary;
             background: $color-extra-c;
             border-radius: .5rem;
+
+            .menu__item--theme {
+               margin-top: auto;
+            }
 
             &::before {
                transition: .2s;
@@ -107,6 +118,74 @@
          .menu__item {
             color: $color-secondary;
             transform: translateX(3rem) scale(.8);
+         }
+      }
+   }
+}
+
+/*---------------------------------*/
+/* MEDIA QUERIES */
+/*---------------------------------*/
+@media screen and (max-width: $responsive-d) {
+   .menu {
+      position: fixed;
+      padding: 0;
+      width: 100%;
+      height: fit-content;
+      justify-content: center;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
+
+      --cell: 3.5rem;
+
+      .menu__list {
+         display: flex;
+         width: fit-content;
+         margin: auto;
+
+         .menu__active-element {
+            top: -2rem;
+            right: auto;
+            left: 0;
+            border-width: .3rem;
+            transform: translate(calc(var(--cell) * var(--target)), 0);
+
+            &::before {
+               top: 1.4rem;
+               right: 2.8rem;
+               border-width: .3rem;
+               border-color: transparent;
+               border-top-color: $color-main;
+               transform: rotate(20deg);
+            }
+
+            &::after {
+               top: 1.4rem;
+               left: 2.8rem;
+               border-width: .3rem;
+               border-color: transparent;
+               border-top-color: $color-main;
+               transform: rotate(-20deg);
+            }
+         }
+
+         .menu__item {
+            padding: 1rem 0;
+            width: var(--cell);
+            height: auto;
+         }
+
+         .menu__item--theme {
+            padding: .8rem;
+         }
+
+         .active {
+
+            .menu__item {
+               transform: translateY(-2.2rem) scale(.7);
+            }
          }
       }
    }

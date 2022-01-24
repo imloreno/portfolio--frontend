@@ -11,36 +11,13 @@ const Skills = (props: { isLoading?: boolean }) => {
 
   return (
     <section
-      className={`skills open-animation ${
+      className={`skills open-animation scroll ${
         props.isLoading && "change-animation"
       }`}
     >
       <header className="skills__header">
         <h1 className="title">Mis habilidades.</h1>
       </header>
-
-      <div className="skills__items-container scroll">
-        {data &&
-          data.map((item: any, index: number) => (
-            <a
-              href={item.web}
-              className="skills__link"
-              target="_blank"
-              rel="noreferrer"
-              key={index}
-            >
-              <article className="skills__article">
-                <div className="skills__logo">
-                  <Logos
-                    type={item.type}
-                    className={`skills__logo--${item.type}`}
-                  />
-                </div>
-                <p className="skills__logo-title">{item.title}</p>
-              </article>
-            </a>
-          ))}
-      </div>
 
       <div className="skills__item-list scroll">
         {data &&
@@ -62,6 +39,29 @@ const Skills = (props: { isLoading?: boolean }) => {
                 ></div>
               </div>
             </article>
+          ))}
+      </div>
+
+      <div className="skills__items-container scroll">
+        {data &&
+          data.map((item: any, index: number) => (
+            <a
+              href={item.web}
+              className="skills__link"
+              target="_blank"
+              rel="noreferrer"
+              key={index}
+            >
+              <article className="skills__article">
+                <div className="skills__logo">
+                  <Logos
+                    type={item.type}
+                    className={`skills__logo--${item.type}`}
+                  />
+                </div>
+                <p className="skills__logo-title">{item.title}</p>
+              </article>
+            </a>
           ))}
       </div>
     </section>

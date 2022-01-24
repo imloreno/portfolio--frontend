@@ -13,7 +13,7 @@ const Experience = (props: { isLoading?: boolean }) => {
 
   return (
     <section
-      className={`experience open-animation ${
+      className={`experience open-animation scroll ${
         props.isLoading && "change-animation"
       }`}
     >

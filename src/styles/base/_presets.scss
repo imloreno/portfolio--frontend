@@ -15,7 +15,6 @@ body {
    font-family: 'Quicksand', sans-serif;
    font-size: $font-normal-a;
    font-weight: 500;
-   background: $color-main;
    -webkit-tap-highlight-color: transparent;
 }
 
@@ -24,8 +23,9 @@ li {
 }
 
 a {
-   color: $color-secondary;
+   color: $color-text-a;
    text-decoration: none;
+   width: fit-content;
    font-size: .9rem;
    font-weight: 600;
 
@@ -54,11 +54,44 @@ a {
    /* Track */
    &::-webkit-scrollbar-track {
       background: $color-extra-a;
+      border-radius: .21rem;
    }
 
    /* Handle */
    &::-webkit-scrollbar-thumb {
       background: $color-secondary;
       border-radius: .2rem;
+   }
+}
+
+/*-----------------------*/
+/* THEMES */
+/*-----------------------*/
+.dark-theme {
+   @include theme2;
+   @include logos-dark;
+}
+
+.light-theme {
+   @include theme1;
+   @include logos-light;
+}
+
+/*-----------------------*/
+/* MEDIA QUERYES */
+/*-----------------------*/
+@media screen and (max-width: $responsive-e) {
+   .scroll {
+      &::-webkit-scrollbar {
+         display: none;
+      }
+   }
+
+   .title {
+      font-size: $font-title-b;
+   }
+
+   .subtitle {
+      font-size: $font-subtitle-b;
    }
 }

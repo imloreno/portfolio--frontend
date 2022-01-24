@@ -23,12 +23,14 @@ const ProjectArticle = (props: props) => {
 
   return (
     <article className={`experience__item ${className}`} onClick={onClick}>
-      <div className="experience__image">
-        <img src={img} alt={title} />
-      </div>
       <div className="experience__data">
-        <h2 className="experience__title subtitle">{title}</h2>
-        <p>{paragraph}</p>
+        <div className="experience__image">
+          <img src={img} alt={title} />
+        </div>
+        <header className="experience__header">
+          <h2 className="experience__title subtitle">{title}</h2>
+          <p className="experience__description">{paragraph}</p>
+        </header>
         <ul className="experience__task-container">
           {tasks.map((task: string, index: number) => (
             <li key={index} className="experience__task">

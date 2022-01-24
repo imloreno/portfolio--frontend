@@ -8,8 +8,9 @@
 .body {
    position: relative;
    display: grid;
-   gap: 2rem;
+   gap: 3rem;
    color: $color-text-a;
+   background: $color-main;
    grid-template-columns: auto 1fr;
    padding: 3rem;
    height: 100vh;
@@ -47,5 +48,26 @@
    100% {
       transform: scale(.95);
       opacity: 0;
+   }
+}
+
+/*-----------------------------*/
+/* RESPONSIVE */
+/*-----------------------------*/
+
+@media screen and (max-width: $responsive-a) {
+   .body {
+      padding: 2rem;
+   }
+}
+
+@media screen and (max-width: $responsive-d) {
+   .body {
+      padding: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 4rem;
+      gap: .3rem;
+      padding-bottom: 0;
+      overflow: hidden;
    }
 }

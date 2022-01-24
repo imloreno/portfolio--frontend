@@ -7,6 +7,7 @@
    border: none;
    transition: .2s;
    will-change: transform;
+   user-select: none;
 
    &:active {
       transform: scale(.95);
@@ -26,10 +27,14 @@
 }
 
 .button__contrast {
-   background: $color-extra-c;
-   color: $color-secondary;
+   color: $color-main;
+   background: $color-extra-a;
    cursor: pointer;
    transition: .2s;
+
+   &:active {
+      transform: scale(.95);
+   }
 
    &:hover {
       animation: buttonDefault .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);

@@ -35,7 +35,7 @@
 
       .academy__certification-list {
          display: flex;
-         gap: 1rem;
+         gap: .5rem;
          flex-direction: column;
          margin: 1rem 0;
          animation: startFromBottom 2.5s;
@@ -46,7 +46,7 @@
 
             li {
                position: relative;
-               padding: .5rem;
+               padding: 1rem;
                border-left: 3px solid $color-secondary;
 
                &:before {
@@ -71,6 +71,54 @@
                   border: 3px solid $color-secondary;
                   transform: translateY(-40%);
                   z-index: 1;
+               }
+            }
+         }
+      }
+   }
+}
+
+/*------------------------------------*/
+/* ANIMATIONS */
+/*------------------------------------*/
+@media screen and (max-width: $responsive-c) {
+   .article-academy {
+      .article-academy__content {
+         .academy__certification-list {
+            a {
+               li {
+                  &::before {
+                     height: .15rem;
+                  }
+
+                  &::after {
+                     border-width: .15rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: $responsive-d) {
+   .article-academy {
+      .article-academy__content {
+         border: none;
+
+         .academy__certification-list {
+
+            a {
+               li {
+                  border: none;
+
+                  &::before {
+                     display: none;
+                  }
+
+                  &::after {
+                     display: none;
+                  }
                }
             }
          }

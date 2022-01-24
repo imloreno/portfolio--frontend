@@ -1,14 +1,8 @@
 .contact {
+   display: flex;
    height: 100%;
+   overflow-x: hidden;
    overflow-y: auto;
-
-   .contact__header {
-      margin-bottom: 1rem;
-
-      .contact__title {
-         text-align: center;
-      }
-   }
 
    .contact__form {
       display: flex;
@@ -41,8 +35,8 @@
                width: 3rem;
                aspect-ratio: 1 / 1;
                font-size: 1.5rem;
-               color: $color-text-a;
-               background: $color-main;
+               color: $color-extra-b;
+               background: $color-extra-a;
                border-radius: 50%;
 
                .contact__icon {
@@ -60,7 +54,7 @@
                   top: .5rem;
                   right: .5rem;
                   border-radius: 50%;
-                  background: $color-main;
+                  background: $color-extra-a;
                }
 
                &::after {
@@ -72,7 +66,7 @@
                   bottom: .2rem;
                   right: .2rem;
                   border-radius: 50%;
-                  background: $color-main;
+                  background: $color-extra-a;
                }
 
 
@@ -87,7 +81,7 @@
                top: 30%;
                left: .2rem;
                border-radius: 50%;
-               background: $color-main;
+               background: $color-extra-a;
 
             }
 
@@ -148,5 +142,31 @@
          color: #ec6464;
       }
 
+   }
+}
+
+/*------------------------------*/
+/* MEDIA QUERYES */
+/*------------------------------*/
+@media screen and (max-width: $responsive-c) {
+
+   .contact {
+
+      .contact__form {
+         justify-content: center;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+}
+
+@media screen and (max-width: $responsive-d) {
+   .contact {
+
+      .contact__form {
+         height: fit-content;
+         min-height: 100%;
+      }
    }
 }

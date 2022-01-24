@@ -2,6 +2,15 @@
 // THEME 1
 //-------------------------
 @mixin theme1 {
+   --color-main: #f8f8f8;
+   --color-secondary: #1b1b1b;
+   --color-text-a: #000000;
+   --color-extra-a: #ff9b21;
+   --color-extra-b: #eff1f1;
+   --color-extra-c: #d6dafc;
+}
+
+@mixin theme2 {
    --color-main: #252a31;
    --color-secondary: #1a1a1a;
    --color-text-a: #c0c4c3;
@@ -10,25 +19,17 @@
    --color-extra-c: #76777e;
 }
 
-// @mixin theme1 {
-//    --color-main: #f8f8f8;
-//    --color-secondary: #000000;
-//    --color-text-a: #000000;
-//    --color-extra-a: #ff9b21;
-//    --color-extra-b: #eff1f1;
-//    --color-extra-c: #d6dafc;
-// }
 
 //HTML logos
-@mixin logos-light {
+@mixin logos-dark {
    --color-html: #534344;
    --color-html-active: #cf1b24;
    --color-css: #394142;
    --color-css-active: #1eb6bb;
    --color-sass: #534353;
    --color-sass-active: #b12c54;
-   --color-js: #524832;
-   --color-js-active: #dd9b16;
+   --color-js: #443e2f;
+   --color-js-active: #dd8016;
    --color-react: #37474d;
    --color-react-active: #3bb2d3;
    --color-router: #4b1122c2;
@@ -50,38 +51,38 @@
    --color-ai: #4d4937;
    --color-ai-active: #db843c;
    --color-figma: #462d29;
-   --color-figma-active: #d14141;
+   --color-figma-active: #ee2222;
 }
 
-// @mixin logos-light {
-//    --color-html: #df9d9f;
-//    --color-html-active: #cf1b24;
-//    --color-css: #a5bfc4;
-//    --color-css-active: #1eb6bb;
-//    --color-sass: #e0bde0;
-//    --color-sass-active: #db32b1;
-//    --color-js: #ecc472;
-//    --color-js-active: #dd9b16;
-//    --color-react: #96d9f3;
-//    --color-react-active: #3bb2d3;
-//    --color-router: #4b1122c2;
-//    --color-router-active: #b11c3c;
-//    --color-redux: #b9a4e2c2;
-//    --color-redux-active: #500ac2;
-//    --color-php: #90c2cfc2;
-//    --color-php-active: #249be0;
-//    --color-mysql: #b1dbc1;
-//    --color-mysql-active: #0cb64d;
-//    --color-git: #e08a8a;
-//    --color-git-active: #ce0b0b;
-//    --color-github: #a8a8a8;
-//    --color-github-active: #000000;
-//    --color-vscode: #8fbfdb;
-//    --color-vscode-active: #4793c5;
-//    --color-psd: #9bd3ec;
-//    --color-psd-active: #1c7ad1;
-//    --color-ai: #ece1a2;
-//    --color-ai-active: #db843c;
-//    --color-figma: #e79587;
-//    --color-figma-active: #e72222;
-// }
+@mixin logos-light {
+   --color-html: #df9d9f;
+   --color-html-active: #cf1b24;
+   --color-css: #a5bfc4;
+   --color-css-active: #1eb6bb;
+   --color-sass: #e0bde0;
+   --color-sass-active: #db32b1;
+   --color-js: #ecc472;
+   --color-js-active: #dd9b16;
+   --color-react: #96d9f3;
+   --color-react-active: #3bb2d3;
+   --color-router: #4b1122c2;
+   --color-router-active: #b11c3c;
+   --color-redux: #b9a4e2c2;
+   --color-redux-active: #500ac2;
+   --color-php: #90c2cfc2;
+   --color-php-active: #249be0;
+   --color-mysql: #b1dbc1;
+   --color-mysql-active: #0cb64d;
+   --color-git: #e08a8a;
+   --color-git-active: #ce0b0b;
+   --color-github: #a8a8a8;
+   --color-github-active: #000000;
+   --color-vscode: #8fbfdb;
+   --color-vscode-active: #4793c5;
+   --color-psd: #9bd3ec;
+   --color-psd-active: #1c7ad1;
+   --color-ai: #ece1a2;
+   --color-ai-active: #db843c;
+   --color-figma: #e79587;
+   --color-figma-active: #e72222;
+}

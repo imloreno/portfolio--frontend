@@ -24,7 +24,7 @@ const PERSONAL_DATA = [
 const Home = (props: { isLoading?: boolean }): JSX.Element => {
   return (
     <section
-      className={`container open-animation ${
+      className={`container open-animation scroll ${
         props.isLoading && "change-animation"
       }`}
     >
