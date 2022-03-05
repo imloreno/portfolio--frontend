@@ -3,7 +3,7 @@ import {
   FiBookOpen,
   FiMessageSquare,
   FiCoffee,
-  FiGitBranch,
+  FiBriefcase,
   FiFeather,
   FiChevronLeft,
   FiChevronRight,
@@ -26,7 +26,7 @@ const Icons = (props: props): JSX.Element => {
     case "skills":
       return <FiBookOpen className={className ?? ""} />;
     case "projects":
-      return <FiGitBranch className={className ?? ""} />;
+      return <FiBriefcase className={className ?? ""} />;
     case "academy":
       return <FiFeather className={className ?? ""} />;
     case "contact":

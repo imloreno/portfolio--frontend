@@ -1,0 +1,8 @@
+{
+   "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "button": "Emviar mensaje"
+   }
+}

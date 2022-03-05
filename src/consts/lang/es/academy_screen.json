@@ -1,0 +1,36 @@
+{
+   "title": "Formación académica",
+   "highschool": {
+      "title": "Secundaria",
+      "name": "General Agustín Saavedra",
+      "subtitle": "2010 - 2015"
+   },
+   "college": {
+      "title": "Grado en ingeniería de sistemas",
+      "name": "Universidad Autónoma Gabriel Rene Moreno",
+      "subtitle": "2016 - 2020",
+      "paragraph": [
+         "A un año de terminar la carrera debido a la cuarentena",
+         "Lo más imoprtante que aprendí durante esta época fue PHP, con programación orientada a objetos (POO), manejo de datos, patrones de arquitectura, lenguaje SQL, y fundamentos de programación."
+      ]
+   },
+   "autodidact": {
+      "title": "Autodidacta",
+      "paragraphs": [
+         {
+            "title": "UDEMY",
+            "text": [
+               "En UDEMY me puedes encontrar como: ",
+               ", en esta plataforma, tengo certificados como:"
+            ]
+         },
+         {
+            "title": "YouTube",
+            "text": [
+               "Hay muchos cursos bastante completos recomendados por la comunidad",
+               "Y muchos más..."
+            ]
+         }
+      ]
+   }
+}

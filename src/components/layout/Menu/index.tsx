@@ -4,8 +4,13 @@ import { setTheme, switchTheme } from "state/actions";
 import Icons from "components/common/icons";
 import ThemeIcon from "components/common/icons/ThemeIcon";
 import { NavLink, useNavigate } from "react-router-dom";
+import langPick from "consts/lang";
 
 const Menu = (props: { setIsLoading: any }) => {
+  //Loading state
+  const store = useSelector((state: any) => state.language);
+  const { menu }: any = langPick(store.lang || "en");
+
   const { setIsLoading } = props;
 
   //Theme manager
@@ -68,7 +73,7 @@ const Menu = (props: { setIsLoading: any }) => {
               <li className="menu__item">
                 <Icons type={item.icon} />
                 <div className="menu__item--popup">
-                  <span>{item.text}</span>
+                  <span>{menu.routeTags[index]}</span>
                 </div>
               </li>
             </NavLink>

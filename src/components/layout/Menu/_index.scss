@@ -2,12 +2,12 @@
    position: sticky;
    display: flex;
    align-items: center;
+   padding: 2rem 0;
    top: 2rem;
    left: 2rem;
-   background: $color-secondary;
-   padding: 2rem 0;
-   border-radius: $radius-a;
    height: 100%;
+   background: $color-secondary;
+   border-radius: $radius-a;
    z-index: 2;
    user-select: none;
 
@@ -65,6 +65,7 @@
          justify-content: center;
          align-items: center;
          color: $color-main;
+         color: $color-extra-c;
          font-size: 2rem;
          padding: 0 2rem;
          height: var(--cell);
@@ -112,6 +113,13 @@
                transform: scale(1);
             }
          }
+      }
+
+      .menu__item--theme {
+         height: 3.5rem;
+         aspect-ratio: 1 / 1;
+         margin: auto;
+         padding: .8rem;
       }
 
       .active {

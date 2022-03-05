@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { getLogos } from "scripts/getLogos";
+import langPick from "consts/lang";
 import Logos from "./logos";
 
 const Skills = (props: { isLoading?: boolean }) => {
+  //Get language from Redux
+  const store = useSelector((store: any) => store.language.lang);
+  const { skills } = langPick(store || "en");
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +22,7 @@ const Skills = (props: { isLoading?: boolean }) => {
       }`}
     >
       <header className="skills__header">
-        <h1 className="title">Mis habilidades.</h1>
+        <h1 className="title">{skills.title}.</h1>
       </header>
 
       <div className="skills__item-list scroll">

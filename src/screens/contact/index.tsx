@@ -8,6 +8,8 @@ import {
   isValid,
   replaceCharacters,
 } from "scripts/characterValidation";
+import { useSelector } from "react-redux";
+import langPick from "consts/lang";
 
 const statusMessages: any = {
   error: "Rellenar correctamente todos los campos",
@@ -15,6 +17,13 @@ const statusMessages: any = {
 };
 
 const Contact = (props: { isLoading?: boolean }) => {
+  //Redux
+  const store = useSelector((store: any) => store.language.lang);
+  const {
+    contact: { form },
+  } = langPick(store || "en");
+
+  //State variables
   const [name, setName] = useState({ isValid: true, value: "" });
   const [email, setEmail] = useState({ isValid: true, value: "" });
   const [message, setMessage] = useState({ isValid: true, value: "" });
@@ -97,7 +106,7 @@ const Contact = (props: { isLoading?: boolean }) => {
         </ul>
         <input
           type="text"
-          placeholder="Nombre"
+          placeholder={form.name}
           onChange={handleName}
           value={name.value}
           className={`${!name.isValid && "input-error"}`}
@@ -105,7 +114,7 @@ const Contact = (props: { isLoading?: boolean }) => {
         />
         <input
           type="email"
-          placeholder="Correo electrónico"
+          placeholder={form.email}
           onChange={handleEmail}
           value={email.value}
           className={`${!email.isValid && "input-error"}`}
@@ -114,13 +123,13 @@ const Contact = (props: { isLoading?: boolean }) => {
         <textarea
           name=""
           id=""
-          placeholder="Mensaje"
+          placeholder={form.message}
           onChange={handleMessage}
           value={message.value}
           className={`${!message.isValid && "input-error"}`}
           required
         ></textarea>
-        <Buttons text="Enviar mensaje" type="contrast" />
+        <Buttons text={form.button} type="contrast" />
         {status.isActive && (
           <span
             className={`status-send ${status.type === "error" && "error-msg"}`}

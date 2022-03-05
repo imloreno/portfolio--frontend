@@ -1,0 +1,33 @@
+{
+   "header": {
+      "title": "Lorenzo Arias Villegas",
+      "subtitle": "Frontend developer"
+   },
+   "about": {
+      "title": "About me",
+      "paragraph": [
+         "My name is Lorenzo Arias Villegas, I am 23 years old, I have been a web developer specialized in frontend for more than 2 years.",
+         "I am looking for new opportunities to improve my skills and knowledge.",
+         "My passion is web development, and my goal is to deepen my knowledge to handle a stack of cutting-edge technologies."
+      ],
+      "personaldata": [
+         {
+            "title": "Fullname",
+            "text": "Lorenzo Santiago Saúl Arias Villegas"
+         },
+         {
+            "title": "Birthday",
+            "text": "March 12, 1998"
+         },
+         {
+            "title": "Address",
+            "text": "Florida Street SN, corner Angel Sandoval"
+         },
+         {
+            "title": "Nationality",
+            "text": "Bolivian"
+         }
+      ],
+      "button": "Download resume"
+   }
+}

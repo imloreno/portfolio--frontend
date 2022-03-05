@@ -1,0 +1,39 @@
+{
+   "title": "Training",
+   "highschool": {
+      "title": "High School",
+      "name": "General Agustín Saavedra",
+      "subtitle": "2010 - 2015",
+      "paragraph": [
+         "During this time, I learned about design using tools like Photoshop"
+      ]
+   },
+   "college": {
+      "title": "Degree on System engineer",
+      "name": "Universidad Autónoma Gabriel Rene Moreno",
+      "subtitle": "2016 - 2020",
+      "paragraph": [
+         "On hiatus for a year due to quarantine",
+         "The most important thing I learned during this time was PHP, with object-oriented programming (OOP), data management, architecture patterns, SQL language and programming fundamentals."
+      ]
+   },
+   "autodidact": {
+      "title": "Autodidact",
+      "paragraphs": [
+         {
+            "title": "UDEMY",
+            "text": [
+               "In UDEMY you can find me as: ",
+               "in this platform, i have the following certifications"
+            ]
+         },
+         {
+            "title": "YouTube",
+            "text": [
+               "There are some playlist about full courses like JavaScript, React, etc:",
+               "And so much more..."
+            ]
+         }
+      ]
+   }
+}

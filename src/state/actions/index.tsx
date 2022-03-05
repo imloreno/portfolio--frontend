@@ -1,5 +1,11 @@
+//Routes
 import actionRoutes from "state/types/routes";
+
+//Themes
 import actionThemes from "state/types/themes";
+
+//Languages
+import actionLanguages from "state/types/language";
 
 //Themes
 const switchTheme = () => ({
@@ -16,4 +22,9 @@ const setPageNum = (payload: number) => ({
   payload,
 });
 
-export { switchTheme, setTheme, setPageNum };
+//Languages
+const setLanguaje = (payload: any) => ({
+  type: actionLanguages.SET_LANGUAGE,
+});
+
+export { switchTheme, setTheme, setPageNum, setLanguaje };

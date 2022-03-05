@@ -45,3 +45,13 @@
       opacity: 1;
    }
 }
+
+@keyframes startOpacity {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
