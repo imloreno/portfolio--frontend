@@ -26,12 +26,6 @@ const initialState = {
       text: "Inicio",
       component: "home",
     },
-    // {
-    //   path: "/about",
-    //   icon: "about",
-    //   text: "Sobre Mí",
-    //   component: "home",
-    // },
     {
       path: "/skills",
       icon: "skills",

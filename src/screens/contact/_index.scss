@@ -13,7 +13,6 @@
       width: 30rem;
       height: fit-content;
       align-items: center;
-      // border-radius: $radius-a;
       background: $color-secondary;
       animation: boxOpen 1.5s;
 
@@ -35,7 +34,7 @@
                width: 3rem;
                aspect-ratio: 1 / 1;
                font-size: 1.5rem;
-               color: $color-extra-b;
+               color: $color-secondary;
                background: $color-extra-a;
                border-radius: 50%;
 

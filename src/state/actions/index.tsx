@@ -6,6 +6,7 @@ import actionThemes from "state/types/themes";
 
 //Languages
 import actionLanguages from "state/types/language";
+import actionWorks from "state/types/works";
 
 //Themes
 const switchTheme = () => ({
@@ -27,4 +28,10 @@ const setLanguaje = (payload: any) => ({
   type: actionLanguages.SET_LANGUAGE,
 });
 
-export { switchTheme, setTheme, setPageNum, setLanguaje };
+//Works
+const setWorkList = (payload: any) => ({
+  type: actionWorks.SET_WORK,
+  payload,
+});
+
+export { switchTheme, setTheme, setPageNum, setLanguaje, setWorkList };

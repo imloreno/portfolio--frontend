@@ -1,47 +1,21 @@
-import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Main from "screens";
-
-interface routes {
-  component: string;
-  icon: string;
-  path: string;
-  text: string;
-}
-
-//Obtain the component target
-const getComponent = (target: string, index: number): JSX.Element => {
-  switch (target) {
-    case "home":
-      return <Main screen="home" />;
-    case "skills":
-      return <Main screen="skills" />;
-    case "projects":
-      return <Main screen="projects" />;
-    case "academy":
-      return <Main screen="academy" />;
-    case "contact":
-      return <Main screen="contact" />;
-    default:
-      return <Main screen="home" />;
-  }
-};
+import WorkList from "screens/experience/sub_routes/WorkList";
 
 const Index = () => {
-  const state: any = useSelector((state) => state);
-  const ROUTES = state.router.pages;
-
   return (
     <Router>
       <Routes>
-        {ROUTES.map((route: routes, index: number) => (
-          <Route
-            path={"/" + route.path}
-            key={index}
-            element={getComponent(route.component, index)}
-          />
-        ))}
+        <Route path="/" element={<Main screen="home" />} />
+        <Route path="/skills" element={<Main screen="skills" />} />
+        <Route path="/projects" element={<Main screen="projects" />}>
+          <Route path="experience" element={<WorkList />} />
+          <Route path="portfolio" element={<p>Work event</p>} />
+          <Route path="achievements" element={<p>Work achievements</p>} />
+        </Route>
+        <Route path="/academy" element={<Main screen="academy" />} />
+        <Route path="/contact" element={<Main screen="contact" />} />
       </Routes>
     </Router>
   );
