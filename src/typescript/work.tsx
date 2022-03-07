@@ -4,4 +4,5 @@ export type Work = {
   description: string;
   tasks: string[];
   reference: { type: string; url: string }[] | any;
+  onClick?: () => void;
 };

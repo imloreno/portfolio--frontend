@@ -43,7 +43,9 @@
          display: flex;
          gap: .5rem;
 
-         a {
+         a,
+         .work_reference__button {
+            font-weight: 600;
             color: $color-secondary;
 
             li {
@@ -51,6 +53,10 @@
                color: $color-secondary;
                background: $color-extra-a;
                border-radius: .5rem;
+            }
+
+            &:hover {
+               text-decoration: underline;
             }
          }
       }

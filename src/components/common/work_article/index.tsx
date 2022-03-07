@@ -2,7 +2,7 @@ import { MAIN_URL } from "consts/variables";
 import type { Work } from "typescript/work";
 
 const WorkArticle = (props: Work) => {
-  const { title, img, description, tasks, reference } = props;
+  const { title, img, description, tasks, reference, onClick } = props;
 
   return (
     <article className="work_article">
@@ -20,6 +20,9 @@ const WorkArticle = (props: Work) => {
         </ul>
 
         <ul className="work_reference">
+          <div className="work_reference__button" onClick={onClick}>
+            <li>details</li>
+          </div>
           {reference.map((item: any, index: number) => (
             <a
               href={item.url}

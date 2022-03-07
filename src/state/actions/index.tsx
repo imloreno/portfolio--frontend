@@ -33,5 +33,21 @@ const setWorkList = (payload: any) => ({
   type: actionWorks.SET_WORK,
   payload,
 });
+const setPortfolioList = (payload: any) => ({
+  type: actionWorks.SET_PORTFOLIO,
+  payload,
+});
+const setAchievements = (payload: any) => ({
+  type: actionWorks.SET_ACHIEVEMENTS,
+  payload,
+});
 
-export { switchTheme, setTheme, setPageNum, setLanguaje, setWorkList };
+export {
+  switchTheme,
+  setTheme,
+  setPageNum,
+  setLanguaje,
+  setWorkList,
+  setPortfolioList,
+  setAchievements,
+};

@@ -1,40 +1,40 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPortfolioList } from "state/actions";
-import getPortfolio from "scripts/getPortfolio";
-import WorkArticle from "components/common/work_article";
-import useSwitchModal from "components/hooks/experience/useSwitchModal";
 import type { Work } from "typescript/work";
+import WorkArticle from "components/common/work_article";
+import { useEffect } from "react";
+import { setAchievements } from "state/actions";
+import getAchievements from "scripts/getAchievements";
+import useSwitchModal from "components/hooks/experience/useSwitchModal";
 import WorkModal from "components/common/work_modal";
 
-const PortfolioList = () => {
+const AchievementsList = () => {
   //Modal data (useSwitchModal)
   const { closeModal, showModal, modalData, modalStatus } = useSwitchModal();
 
   //Using Redux
-  const portfolioList: Work[] = useSelector(
-    (state: any) => state.works.portfolio
+  const achievementsList: Work[] = useSelector(
+    (state: any) => state.works.achievements
   );
   const dispatch = useDispatch();
 
   //Call API
   useEffect(() => {
-    if (!portfolioList.length) {
-      getPortfolio().then((res: any): void => {
-        dispatch(setPortfolioList(res));
+    if (!achievementsList.length) {
+      getAchievements().then((res: any): void => {
+        dispatch(setAchievements(res));
       });
     }
-  }, [dispatch, portfolioList.length]);
+  }, [dispatch, achievementsList.length]);
 
   return (
     <>
       {modalStatus && <WorkModal {...modalData} onClick={closeModal} />}
-      {!!portfolioList &&
-        portfolioList.map((item: Work, index: number) => (
+      {!!achievementsList &&
+        achievementsList.map((item: Work, index: number) => (
           <WorkArticle {...item} key={index} onClick={() => showModal(item)} />
         ))}
     </>
   );
 };
 
-export default PortfolioList;
+export default AchievementsList;

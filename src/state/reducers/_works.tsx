@@ -2,6 +2,8 @@ import actionWorks from "state/types/works";
 
 const initialState = {
   works: [],
+  portfolio: [],
+  achievements: [],
 };
 
 const works = (state = initialState, action: any) => {
@@ -11,6 +13,19 @@ const works = (state = initialState, action: any) => {
         ...state,
         works: action.payload,
       };
+
+    case actionWorks.SET_PORTFOLIO:
+      return {
+        ...state,
+        portfolio: action.payload,
+      };
+
+    case actionWorks.SET_ACHIEVEMENTS:
+      return {
+        ...state,
+        achievements: action.payload,
+      };
+
     default:
       return state;
   }
