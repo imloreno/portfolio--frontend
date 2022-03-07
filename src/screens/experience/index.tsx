@@ -1,6 +1,26 @@
 import { useEffect } from "react";
-import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Filter from "components/common/filter";
+import SubMenu from "components/common/submenu";
+
+//Submenu routes
+const submenu = [
+  {
+    text: "Work experience",
+    path: "experience",
+    className: "submenu_item",
+  },
+  {
+    text: "Portfolio",
+    path: "portfolio",
+    className: "submenu_item",
+  },
+  {
+    text: "Personal achievements",
+    path: "achievements",
+    className: "submenu_item",
+  },
+];
 
 const Experience = (props: { isLoading?: boolean }) => {
   //Router redirect
@@ -21,26 +41,7 @@ const Experience = (props: { isLoading?: boolean }) => {
         <h1 className="title experience-header__title">Experience.</h1>
       </header>
       <div className="experience__container">
-        <ul className="experience_menu">
-          <NavLink
-            to="/projects/experience"
-            className={(active) => (active.isActive ? "active" : "")}
-          >
-            <li className="experience_menu_link">Work experience</li>
-          </NavLink>
-          <NavLink
-            to="/projects/portfolio"
-            className={(active) => (active.isActive ? "active" : "")}
-          >
-            <li className="experience_menu_link">Portfolio</li>
-          </NavLink>
-          <NavLink
-            to="/projects/achievements"
-            className={(active) => (active.isActive ? "active" : "")}
-          >
-            <li className="experience_menu_link">Personal achievements</li>
-          </NavLink>
-        </ul>
+        {<SubMenu data={submenu} />}
         <div className="experience_item_container">
           <Outlet />
         </div>

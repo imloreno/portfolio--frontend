@@ -16,6 +16,7 @@
       display: grid;
       gap: 1rem;
       grid-template-columns: auto 1fr;
+      align-items: center;
       max-width: 60rem;
       max-height: 100%;
       border-radius: 1rem;
@@ -30,8 +31,7 @@
          img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-
+            object-fit: contain;
          }
       }
 
@@ -95,6 +95,36 @@
 
       &::-webkit-scrollbar {
          display: none;
+      }
+   }
+}
+
+/*--------------------------------*/
+/* RESPONSIVE */
+/*--------------------------------*/
+@media screen and (max-width: $responsive-d) {
+   .work_modal {
+      .work_modal__container {
+         grid-template-columns: auto;
+
+         .work_modal__container_img {
+            margin: auto;
+         }
+
+         .work_modal__info {
+            text-align: center;
+
+            .work_modal__task_list {
+               li {
+
+                  // text-align: left;
+               }
+            }
+         }
+
+         .work_modal__button_list {
+            justify-content: center;
+         }
       }
    }
 }

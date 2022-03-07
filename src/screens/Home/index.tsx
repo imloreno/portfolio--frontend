@@ -4,25 +4,6 @@ import langPick from "consts/lang";
 import { useSelector } from "react-redux";
 import HomeArticle from "./HomeArticle";
 
-const PERSONAL_DATA = [
-  {
-    title: "Nombre completo",
-    text: "Lorenzo Santiago Saúl Arias Villegas",
-  },
-  {
-    title: "Fecha de nacimiento",
-    text: "12 / Marzo / 1998",
-  },
-  {
-    title: "Dirección",
-    text: "Calle florida esquina Angel Sandoval",
-  },
-  {
-    title: "Nacionalidad",
-    text: "Bolivia",
-  },
-];
-
 const Home = (props: { isLoading?: boolean }): JSX.Element => {
   const store = useSelector((store: any) => store.language);
 

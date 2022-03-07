@@ -8,7 +8,7 @@ const Academy = (props: { isLoading?: boolean }) => {
       }`}
     >
       <header>
-        <h1 className="title academy__title">Formación académica.</h1>
+        <h1 className="title academy__title">Training.</h1>
       </header>
       <div className="academy__container">
         <div className="academy__area_a">

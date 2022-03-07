@@ -1,0 +1,30 @@
+.submenu_container {
+   position: sticky;
+   top: 0;
+   display: flex;
+   gap: .7rem;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 100%;
+   padding: 2rem 1rem;
+   height: fit-content;
+   background: $color-secondary;
+   border-radius: 1rem;
+
+   a {
+      .submenu_item {
+         padding: 1rem 1.5rem;
+         min-width: 14rem;
+         background: $color-main;
+         border-radius: 1rem;
+      }
+   }
+
+   .active {
+      color: $color-secondary;
+
+      .submenu_item {
+         background: $color-extra-a;
+      }
+   }
+}
