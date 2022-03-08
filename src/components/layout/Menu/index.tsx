@@ -58,11 +58,7 @@ const Menu = (props: { setIsLoading: any }) => {
     <header className="menu">
       <nav>
         <ul className="menu__list" ref={menuList}>
-          <div
-            className="menu__active-element"
-            // style={{ transform: `translateY(${4 * (pageTarget - 1)}rem)` }}
-            style={style}
-          ></div>
+          <div className="menu__active-element" style={style}></div>
           {PAGES.map((item: any, index: number) => (
             <NavLink
               to={item.path}

@@ -12,9 +12,12 @@
    border-radius: 1rem;
 
    a {
+      width: 100%;
+
       .submenu_item {
          padding: 1rem 1.5rem;
-         min-width: 14rem;
+         min-width: 11rem;
+         width: 100%;
          background: $color-main;
          border-radius: 1rem;
       }
@@ -25,6 +28,45 @@
 
       .submenu_item {
          background: $color-extra-a;
+      }
+   }
+}
+
+/*------------------------------------*/
+/* RESPONSIVE */
+/*------------------------------------*/
+@media screen and (max-width: $responsive-b) {
+
+   .submenu_container {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 1rem;
+      background: none;
+      overflow-x: auto;
+
+      a {
+         width: fit-content !important;
+         min-width: fit-content;
+
+         .submenu_item {
+            width: fit-content !important;
+            min-width: fit-content;
+            display: flex;
+            align-items: center;
+            border: .15rem solid $color-text-a;
+            height: 100%;
+         }
+
+         &[class="active"] {
+            .submenu_item {
+               border: .15rem solid transparent;
+            }
+         }
+      }
+
+      &::-webkit-scrollbar {
+         display: none;
       }
    }
 }

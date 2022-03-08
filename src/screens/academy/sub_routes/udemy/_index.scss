@@ -1,0 +1,24 @@
+.udemy {
+   padding-right: 2rem;
+
+   .udemy_link {
+      color: $color-extra-a;
+      text-decoration: underline;
+   }
+
+   .udemy_list {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+      margin-top: 1rem;
+   }
+}
+
+/*---------------------------*/
+/* RESPONSIVE */
+/*---------------------------*/
+@media screen and (max-width: $responsive-b) {
+   .udemy {
+      padding: 0 1rem;
+   }
+}
