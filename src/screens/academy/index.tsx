@@ -15,11 +15,6 @@ const submenu = [
     className: "submenu_item",
   },
   {
-    text: "High School",
-    path: "highschool",
-    className: "submenu_item",
-  },
-  {
     text: "College",
     path: "college",
     className: "submenu_item",

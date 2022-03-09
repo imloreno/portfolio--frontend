@@ -8,6 +8,7 @@ import PortfolioList from "screens/experience/sub_routes/PortfolioList";
 import AchievementsList from "screens/experience/sub_routes/AchievementsList";
 import UdemyScreen from "screens/academy/sub_routes/udemy";
 import YouTubeScreen from "screens/academy/sub_routes/youtube";
+import CollegeScreen from "screens/academy/sub_routes/college";
 
 const Index = () => {
   return (
@@ -25,8 +26,7 @@ const Index = () => {
         <Route path="/academy" element={<Main screen="academy" />}>
           <Route path="udemy" element={<UdemyScreen />} />
           <Route path="youtube" element={<YouTubeScreen />} />
-          <Route path="highschool" element={<p>HighSchool</p>} />
-          <Route path="college" element={<p>College</p>} />
+          <Route path="college" element={<CollegeScreen />} />
         </Route>
 
         <Route path="/contact" element={<Main screen="contact" />} />
