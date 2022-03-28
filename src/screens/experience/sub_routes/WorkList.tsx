@@ -26,10 +26,26 @@ const WorkList = (): JSX.Element => {
   return (
     <>
       {modalStatus && <WorkModal {...modalData} onClick={closeModal} />}
-      {!!workList &&
-        workList.map((item: any, index: number) => (
-          <WorkArticle {...item} key={index} onClick={() => showModal(item)} />
-        ))}
+      {!!workList && workList.length > 0
+        ? workList.map((item: any, index: number) => (
+            <WorkArticle
+              {...item}
+              key={index}
+              onClick={() => showModal(item)}
+            />
+          ))
+        : [0, 1].map((element) => (
+            <WorkArticle
+              key={element}
+              title="Lorem ipsum"
+              img={"view/assets/profile-default.png"}
+              className="work_article--loading"
+              description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum."
+              tasks={["Task1", "Task2", "Task3"]}
+              reference={[{ url: "/", type: "Link" }]}
+              onClick={() => {}}
+            />
+          ))}
     </>
   );
 };

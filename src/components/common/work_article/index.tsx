@@ -1,19 +1,32 @@
 import { MAIN_URL } from "consts/variables";
 import type { Work } from "typescript/work";
 
-const WorkArticle = (props: Work) => {
-  const { title, img, description, tasks, reference, onClick } = props;
+type ClassNames = {
+  className?: string;
+};
+interface Props extends ClassNames, Work {}
+
+const WorkArticle = (props: Props) => {
+  const {
+    title,
+    img,
+    description,
+    tasks,
+    reference,
+    onClick,
+    className = "",
+  } = props;
 
   return (
-    <article className="work_article">
+    <article className={`work_article ${className}`}>
       <div className="work_profile">
         <img src={MAIN_URL + img} alt={title} />
       </div>
       <div className="work_description">
         <h3 className="work_title">{title}</h3>
-        <p>{description}</p>
+        <p className="work_description">{description}</p>
 
-        <ul className="work_taks">
+        <ul className="work_tasks">
           {tasks.map((item: string, index: number) => (
             <li key={index}>{item}</li>
           ))}

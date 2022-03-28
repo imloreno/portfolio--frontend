@@ -30,7 +30,7 @@
          color: $color-extra-a;
       }
 
-      .work_taks {
+      .work_tasks {
          display: none;
 
          li {
@@ -48,6 +48,7 @@
          .work_reference__button {
             font-weight: 600;
             color: $color-secondary;
+            font-size: $font-small-b;
 
             li {
                padding: .5rem 1rem;
@@ -63,6 +64,44 @@
       }
    }
 
+}
+
+//Loading
+.work_article--loading {
+   animation: opacityLoading alternate infinite .5s ease-in-out;
+
+   .work_profile {
+
+      img {
+         display: none;
+      }
+   }
+
+   .work_description {
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .work_title {
+         opacity: 0;
+      }
+
+      .work_description {
+         opacity: 0;
+      }
+
+      .work_reference {
+         display: flex;
+         gap: .5rem;
+
+         a,
+         .work_reference__button {
+            opacity: 0;
+            pointer-events: none;
+         }
+      }
+   }
 }
 
 /*-----------------------*/
