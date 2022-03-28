@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Buttons from "components/common/buttons";
 import Filter from "components/common/filter";
-import SocialMediaIcons from "components/common/filter/SocialMediaIcons";
+import SocialMediaIcons from "components/common/icons/SocialMediaIcons";
 import sendEmail from "scripts/sendEmail";
 import {
   isEmail,
@@ -86,7 +86,7 @@ const Contact = (props: { isLoading?: boolean }) => {
             </li>
           </a>
           <a
-            href="https://www.github.com/SoySanty"
+            href="https://www.github.com/imloreno"
             rel="noreferrer"
             target="_blank"
           >
@@ -101,6 +101,15 @@ const Contact = (props: { isLoading?: boolean }) => {
           >
             <li>
               <SocialMediaIcons type="whatsapp" className="contact__icon" />
+            </li>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/soylorenzo/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <li>
+              <SocialMediaIcons type="linkedin" className="contact__icon" />
             </li>
           </a>
         </ul>

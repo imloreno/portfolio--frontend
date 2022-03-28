@@ -16,6 +16,8 @@ const sendEmail = async (props: props) => {
 
   const request = await fetch(URL, data);
   const response = await request.text();
+  console.log(body);
+
   return response;
 };
 

@@ -10,16 +10,17 @@
    height: fit-content;
    background: $color-secondary;
    border-radius: 1rem;
+   z-index: 2;
 
    a {
       width: 100%;
 
       .submenu_item {
-         padding: 1rem 1.5rem;
+         padding: .5rem 1rem;
          min-width: 11rem;
          width: 100%;
          background: $color-main;
-         border-radius: 1rem;
+         border-radius: .5rem;
       }
    }
 
@@ -38,11 +39,11 @@
 @media screen and (max-width: $responsive-b) {
 
    .submenu_container {
-      position: relative;
       flex-direction: row;
       flex-wrap: nowrap;
       padding: 1rem;
-      background: none;
+      top: -2rem;
+      border-radius: 0;
       overflow-x: auto;
 
       a {
