@@ -1,5 +1,5 @@
 import Profile from "assets/profile.jpg";
-import Buttons from "components/common/buttons";
+import Buttons from "components/common/Buttons";
 import langPick from "consts/lang";
 import { useSelector } from "react-redux";
 import HomeArticle from "./HomeArticle";

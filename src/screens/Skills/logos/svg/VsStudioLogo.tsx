@@ -1,6 +1,8 @@
-import React from "react";
+interface Props {
+  className?: string;
+}
 
-const VsStudioLogo = (props: { className: string }) => {
+const VsStudioLogo = (props: Props) => {
   return (
     <svg
       id="vscode"

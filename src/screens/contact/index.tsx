@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Buttons from "components/common/buttons";
+import Buttons from "components/common/Buttons";
 import Filter from "components/common/filter";
 import SocialMediaIcons from "components/common/icons/SocialMediaIcons";
 import sendEmail from "scripts/sendEmail";

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getLogos } from "scripts/getLogos";
 import langPick from "consts/lang";
-import Logos from "./logos";
+import Logos from "./Logos";
 
 const Skills = (props: { isLoading?: boolean }) => {
   //Get language from Redux

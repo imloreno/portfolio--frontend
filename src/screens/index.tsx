@@ -1,11 +1,11 @@
 import { Suspense, lazy, useState } from "react";
 
-import Menu from "components/layout/menu";
+import Menu from "components/layout/Menu";
 import Loading from "./loading";
 import { useSelector } from "react-redux";
 
-const Home = lazy(() => import("screens/home"));
-const Skills = lazy(() => import("screens/skills"));
+const Home = lazy(() => import("screens/Home"));
+const Skills = lazy(() => import("screens/Skills"));
 const Experience = lazy(() => import("screens/experience"));
 const Academy = lazy(() => import("screens/academy"));
 const Contact = lazy(() => import("screens/contact"));
