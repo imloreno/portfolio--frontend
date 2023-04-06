@@ -111,18 +111,18 @@
                   font-size: $font-normal-a;
                }
 
-               &::before {
-                  content: "";
-                  position: absolute;
-                  width: .5rem;
-                  height: .5rem;
-                  left: 0;
-                  top: 0;
-                  border-radius: 50%;
-                  background: $color-extra-b;
-                  outline: .15rem solid $color-text-a;
-                  transform: translateX(-65%);
-               }
+               // &::before {
+               //    content: "";
+               //    position: absolute;
+               //    width: .5rem;
+               //    height: .5rem;
+               //    left: 0;
+               //    top: 0;
+               //    border-radius: 50%;
+               //    background: $color-extra-b;
+               //    outline: .15rem solid $color-text-a;
+               //    transform: translateX(-65%);
+               // }
             }
          }
       }

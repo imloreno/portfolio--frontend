@@ -66,21 +66,23 @@
       grid-area: 2 / 2;
       display: flex;
       flex-direction: column;
-      padding-left: .5rem;
+      // padding-left: .5rem;
       overflow-y: auto;
 
       .skills__item {
          position: relative;
          padding: .5rem 1rem;
-         border-left: .15rem solid $color-text-a;
+         // border-left: .15rem solid $color-text-a;
 
          .skills__item-title {
             font-size: $font-small-a;
             font-weight: 600;
+            color: $color-extra-a;
          }
 
          .skills__item-habilities {
             font-size: $font-litle-a;
+            // opacity: .8;
          }
 
          .skills__item-bar {
@@ -108,18 +110,18 @@
             }
          }
 
-         &::before {
-            position: absolute;
-            content: "";
-            width: .5rem;
-            height: .5rem;
-            top: 0;
-            left: 0;
-            background: $color-main;
-            border-radius: 50%;
-            border: .15rem solid $color-text-a;
-            transform: translateX(-60%);
-         }
+         // &::before {
+         //    position: absolute;
+         //    content: "";
+         //    width: .5rem;
+         //    height: .5rem;
+         //    top: 0;
+         //    left: 0;
+         //    background: $color-main;
+         //    border-radius: 50%;
+         //    border: .15rem solid $color-text-a;
+         //    transform: translateX(-60%);
+         // }
       }
    }
 }

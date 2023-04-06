@@ -15,6 +15,7 @@ const Index = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Screens screen="home" />} />
+        {/* <Route path="/" element={<Loading />} /> */}
         <Route path="/skills" element={<Screens screen="skills" />} />
 
         <Route path="/projects" element={<Screens screen="projects" />}>
