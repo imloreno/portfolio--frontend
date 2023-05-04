@@ -110,19 +110,6 @@
                h3 {
                   font-size: $font-normal-a;
                }
-
-               // &::before {
-               //    content: "";
-               //    position: absolute;
-               //    width: .5rem;
-               //    height: .5rem;
-               //    left: 0;
-               //    top: 0;
-               //    border-radius: 50%;
-               //    background: $color-extra-b;
-               //    outline: .15rem solid $color-text-a;
-               //    transform: translateX(-65%);
-               // }
             }
          }
       }
@@ -203,5 +190,52 @@
       .container__personaldata {
          margin-left: 2rem;
       }
+   }
+}
+
+
+@media screen and (min-width: $responsive-g) {
+   .container{
+      grid-template-columns: 1fr .35fr;
+      grid-template-rows: .75fr 1fr;
+
+   .container__header {
+      padding: 0 3vw;
+   }
+
+   .container__box {
+      padding: 0 3vw;
+   }
+
+   .container__profile {
+      width: 40vh;
+      top: 20vh;
+      right: 3vw;
+      padding: 3vh 3vw;
+
+      .container-profile-photo {
+         height: 13vh;
+         aspect-ratio: 1/1;
+         margin: -13vh auto 4vh auto;
+      }
+
+      .container__data {
+   
+         .container__personaldata {
+            gap: .50vh .5vw;
+            flex-direction: column;
+            border-left: .15rem solid $color-text-a;
+   
+            .personaldata__item {
+               position: relative;
+               padding: 0 2rem;
+   
+               h3 {
+                  font-size: $font-normal-a;
+               }
+            }
+         }
+      }
+   }
    }
 }

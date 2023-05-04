@@ -95,3 +95,13 @@ a {
       font-size: $font-subtitle-b;
    }
 }
+
+@media screen and (min-width: $responsive-g) { // 85rem
+   .title {
+      font-size: $font-title-b_infinite;
+   }
+
+   .subtitle {
+      font-size: $font-subtitle-b_infinite;
+   }
+}
