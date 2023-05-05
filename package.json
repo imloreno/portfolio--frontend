@@ -23,7 +23,6 @@
     "web-vitals": "^2.1.3",
     "yarn": "^1.22.19"
   },
-  "website": "soylorenzo.tk",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
