@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getLogos } from "scripts/getLogos";
 import langPick from "consts/lang";
-import Logos from "./Logos";
+import Logos from "./Logos/index";
 
 const Skills = (props: { isLoading?: boolean }) => {
   //Get language from Redux
@@ -17,8 +17,9 @@ const Skills = (props: { isLoading?: boolean }) => {
 
   return (
     <section
-      className={`skills open-animation scroll ${props.isLoading &&
-        "change-animation"}`}
+      className={`skills open-animation scroll ${
+        props.isLoading && "change-animation"
+      }`}
     >
       <header className="skills__header">
         <h1 className="title">{skills.title}.</h1>
