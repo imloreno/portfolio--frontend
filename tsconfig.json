@@ -19,14 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "allowUnreachableCode": true,
-    "skipDefaultLibCheck": true
+    "jsx": "react-jsx"
   },
   "include": [
     "./src"
