@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getLogos } from "scripts/getLogos";
 import langPick from "consts/lang";
-// import Logos from "./Logos";
+import Logos from "screens/Skills/Logos";
 
 const Skills = (props: { isLoading?: boolean }) => {
   //Get language from Redux
@@ -60,10 +60,10 @@ const Skills = (props: { isLoading?: boolean }) => {
             >
               <article className="skills__article">
                 <div className="skills__logo">
-                  {/* <Logos
+                  <Logos
                     type={item.type}
                     className={`skills__logo--${item.type}`}
-                  /> */}
+                  />
                 </div>
                 <p className="skills__logo-title">{item.title}</p>
               </article>
