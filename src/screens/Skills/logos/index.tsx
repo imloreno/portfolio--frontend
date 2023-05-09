@@ -39,7 +39,7 @@ const Logos = (props: props) => {
     default: <HtmlLogo className={className ?? ""} />,
   };
 
-  return showIconType[type] ? showIconType[type] : showIconType["default"];
+  return showIconType[type] || showIconType["default"];
 };
 
 export default Logos;
