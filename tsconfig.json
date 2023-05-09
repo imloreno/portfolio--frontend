@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "target": "es2020",
     "lib": [
       "dom",
@@ -22,6 +22,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "./src"
   ]
 }
