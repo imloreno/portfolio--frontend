@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Buttons from "components/common/Buttons";
 import Filter from "components/common/filter";
@@ -78,7 +79,7 @@ const Contact = (props: { isLoading?: boolean }) => {
         <ul className="contact__buttons">
           <a
             href="https://www.facebook.com/Sanc7us"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <li>
@@ -87,7 +88,7 @@ const Contact = (props: { isLoading?: boolean }) => {
           </a>
           <a
             href="https://www.github.com/imloreno"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <li>
@@ -96,7 +97,7 @@ const Contact = (props: { isLoading?: boolean }) => {
           </a>
           <a
             href="https://api.whatsapp.com/send/?phone=59169141407&text=Hola"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <li>
@@ -105,7 +106,7 @@ const Contact = (props: { isLoading?: boolean }) => {
           </a>
           <a
             href="https://www.linkedin.com/in/soylorenzo/"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <li>

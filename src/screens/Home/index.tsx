@@ -1,3 +1,4 @@
+import React from "react";
 import Profile from "assets/profile.jpg";
 import Buttons from "components/common/Buttons";
 import langPick from "consts/lang";
@@ -52,7 +53,7 @@ const Home = (props: { isLoading?: boolean }): JSX.Element => {
 
         <a
           href="https://api.soylorenzo.tk/view/assets/portfolio.pdf"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <Buttons

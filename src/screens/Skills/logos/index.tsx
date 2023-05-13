@@ -1,3 +1,4 @@
+import React from "react";
 import HtmlLogo from "./svg/HtmlLogo";
 import CssLogo from "./svg/CssLogo";
 import Es6Logo from "./svg/Es6Logo";

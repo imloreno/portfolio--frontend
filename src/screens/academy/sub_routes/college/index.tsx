@@ -1,3 +1,4 @@
+import React from "react";
 const CollegeScreen = () => {
   return (
     <section className="college_screen">

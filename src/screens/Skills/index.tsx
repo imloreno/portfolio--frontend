@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getLogos } from "scripts/getLogos";
@@ -55,7 +56,7 @@ const Skills = (props: { isLoading?: boolean }) => {
               href={item.web}
               className="skills__link"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               key={index}
             >
               <article className="skills__article">

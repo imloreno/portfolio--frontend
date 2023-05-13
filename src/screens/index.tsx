@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Suspense, lazy, useState } from "react";
 
 import Menu from "components/layout/Menu";

@@ -1,3 +1,4 @@
+import React from "react";
 import { FiGithub, FiFacebook, FiLinkedin } from "react-icons/fi";
 import { ImWhatsapp } from "react-icons/im";
 

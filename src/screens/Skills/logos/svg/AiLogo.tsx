@@ -1,3 +1,4 @@
+import React from "react";
 const AiLogo = (props: { className: string }) => {
   return (
     <svg

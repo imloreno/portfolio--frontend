@@ -1,3 +1,4 @@
+import React from "react";
 import { MAIN_URL } from "consts/variables";
 import type { Work } from "typescript/work";
 

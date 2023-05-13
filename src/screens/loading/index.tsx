@@ -1,3 +1,4 @@
+import React from "react";
 import Filter from "components/common/filter";
 
 const Loading = () => {

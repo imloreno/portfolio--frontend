@@ -1,3 +1,4 @@
+import React from "react";
 import ReferenceCard from "../reference_card";
 
 const UDEMY_COURSES = [
@@ -61,7 +62,7 @@ const UdemyScreen = () => {
         <a
           href="https://www.udemy.com"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="udemy_link"
         >
           UDEMY
@@ -70,7 +71,7 @@ const UdemyScreen = () => {
         <a
           href="https://www.udemy.com/user/santy-arias/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="udemy_link"
         >
           Lorenzo Santiago Saul Arias Villegas

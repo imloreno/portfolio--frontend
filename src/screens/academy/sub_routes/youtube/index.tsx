@@ -1,3 +1,4 @@
+import React from "react";
 import ReferenceCard from "../reference_card";
 
 const YOUTUBE_COURSES = [

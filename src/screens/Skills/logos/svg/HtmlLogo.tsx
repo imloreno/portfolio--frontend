@@ -1,3 +1,4 @@
+import React from "react";
 const HtmlLogo = (props: { className: string }) => {
   return (
     <svg

@@ -1,3 +1,4 @@
+import React from "react";
 const Es6Logo = (props: { className: string }) => {
   return (
     <svg

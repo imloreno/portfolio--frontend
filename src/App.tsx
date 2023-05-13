@@ -1,3 +1,4 @@
+import React from "react";
 import STORE from "state/store";
 import { Provider } from "react-redux";
 import Routes from "Routes";

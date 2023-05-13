@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { Work } from "typescript/work";
 import WorkArticle from "components/common/work_article";
