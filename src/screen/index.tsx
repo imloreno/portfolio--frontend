@@ -6,11 +6,11 @@ import Menu from "components/layout/Menu";
 import Loading from "./loading";
 import { useSelector } from "react-redux";
 
-const Home = lazy(() => import("screens/Home"));
-const Skills = lazy(() => import("screens/Skills"));
-const Experience = lazy(() => import("screens/experience"));
-const Academy = lazy(() => import("screens/academy"));
-const Contact = lazy(() => import("screens/contact"));
+const Home = lazy(() => import("screen/Home"));
+const Skills = lazy(() => import("screen/Skills"));
+const Experience = lazy(() => import("screen/experience"));
+const Academy = lazy(() => import("screen/academy"));
+const Contact = lazy(() => import("screen/contact"));
 
 const Screens = (props: { screen: string }): JSX.Element => {
   const [isLoading, setIsLoading] = useState(false);
