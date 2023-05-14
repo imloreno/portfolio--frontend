@@ -1,3 +1,4 @@
+import React from "react";
 const ThemeIcon = (props: { dark: boolean }): JSX.Element => {
   return (
     <svg

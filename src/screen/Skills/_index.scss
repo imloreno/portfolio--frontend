@@ -1,0 +1,174 @@
+.skills {
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: 1.6fr 1fr;
+   grid-template-rows: auto 1fr;
+   padding-right: 1rem;
+   max-height: 100%;
+   overflow-y: auto;
+
+   .skills__header {
+      grid-column: 1 / span 2;
+      padding: 0 1rem;
+      padding-bottom: 0;
+   }
+
+   .skills__items-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 7rem), 1fr));
+      grid-auto-rows: max-content;
+      padding: 1rem;
+      overflow-y: auto;
+
+      .skills__link {
+         width: 100%;
+
+         .skills__article {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+
+            .skills__logo {
+               position: relative;
+               padding: 1rem;
+               padding-bottom: .8rem;
+               height: 7rem;
+               background: $color-extra-b;
+               transition: .5s;
+               border-radius: 1rem;
+
+               .skills__logo-svg {
+                  position: relative;
+                  z-index: 1;
+               }
+            }
+
+            &:hover {
+
+               .skills__logo {
+                  transform: translateY(-.2rem);
+                  box-shadow: 0 .5rem 1rem 0 #b9b9b9;
+                  box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .2);
+               }
+            }
+
+            .skills__logo-title {
+               margin-top: .5rem;
+               font-size: $font-small-a;
+            }
+
+         }
+      }
+   }
+
+   .skills__item-list {
+      grid-area: 2 / 2;
+      display: flex;
+      flex-direction: column;
+      // padding-left: .5rem;
+      overflow-y: auto;
+
+      .skills__item {
+         position: relative;
+         padding: .5rem 1rem;
+         // border-left: .15rem solid $color-text-a;
+
+         .skills__item-title {
+            font-size: $font-small-a;
+            font-weight: 600;
+            color: $color-extra-a;
+         }
+
+         .skills__item-habilities {
+            font-size: $font-litle-a;
+            // opacity: .8;
+         }
+
+         .skills__item-bar {
+            padding-right: .5rem;
+            margin-top: .3rem;
+            width: 100%;
+            background: $color-extra-c;
+            border-radius: .2rem;
+
+            .skills__item-bar--level {
+               position: relative;
+               transition: 2s;
+               height: .3rem;
+               border-radius: .2rem;
+               overflow: hidden;
+
+               &::before {
+                  position: absolute;
+                  content: "";
+                  width: 100%;
+                  height: 100%;
+                  background: $color-secondary;
+                  animation: fillBar 2s cubic-bezier(0.19, 1, 0.22, 1);
+               }
+            }
+         }
+
+         // &::before {
+         //    position: absolute;
+         //    content: "";
+         //    width: .5rem;
+         //    height: .5rem;
+         //    top: 0;
+         //    left: 0;
+         //    background: $color-main;
+         //    border-radius: 50%;
+         //    border: .15rem solid $color-text-a;
+         //    transform: translateX(-60%);
+         // }
+      }
+   }
+}
+
+//---------------------------
+// LOGO STYLES
+//---------------------------
+@import "./Logos/logo_styles/";
+
+//---------------------------
+// ANIMATIONS
+//---------------------------
+@keyframes fillBar {
+   from {
+      width: 0%;
+   }
+
+   to {
+      width: 100%;
+   }
+}
+
+/*-----------------------------*/
+/* MEDIA QUERYES */
+/*-----------------------------*/
+@media screen and (max-width: $responsive-b) {
+   .skills {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media screen and (max-width: $responsive-c) {
+   .skills {
+      display: block;
+
+      .skills__header {
+         margin-bottom: 2rem;
+      }
+
+      .skills__items-container {
+         margin: 1rem 0;
+      }
+   }
+}
+
+@media screen and (max-width: $responsive-d) {
+   .skills {
+      padding: 2rem;
+   }
+}

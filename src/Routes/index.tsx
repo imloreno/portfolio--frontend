@@ -1,14 +1,15 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Screens from "screens";
+import Screens from "screen";
 
 //Submenu routes
-import WorkList from "screens/experience/sub_routes/WorkList";
-import PortfolioList from "screens/experience/sub_routes/PortfolioList";
-import AchievementsList from "screens/experience/sub_routes/AchievementsList";
-import UdemyScreen from "screens/academy/sub_routes/udemy";
-import YouTubeScreen from "screens/academy/sub_routes/youtube";
-import CollegeScreen from "screens/academy/sub_routes/college";
+import WorkList from "screen/experience/sub_routes/WorkList";
+import PortfolioList from "screen/experience/sub_routes/PortfolioList";
+import AchievementsList from "screen/experience/sub_routes/AchievementsList";
+import UdemyScreen from "screen/academy/sub_routes/udemy";
+import YouTubeScreen from "screen/academy/sub_routes/youtube";
+import CollegeScreen from "screen/academy/sub_routes/college";
 
 const Index = () => {
   return (
